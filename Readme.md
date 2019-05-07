@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Анна Быкадорова](https://up.htmlacademy.ru/htmlcss/25/user/994157).
-* Наставник: [Алим Нагоев] (https://htmlacademy.ru/profile/id911531)
+* Наставник: [Алим Нагоев](https://htmlacademy.ru/profile/id911531)
 
 ---
 
