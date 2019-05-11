@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="отдых, маленький городок, красивое место">
-    <meta name="description" content="Городок Седона с красивыми видами">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="отдых, маленький городок, красивое место">
+	<meta name="description" content="Городок Седона с красивыми видами">
+	<title>HTML Academy: Седона</title>
+</head>
+
+<body>
+	<!-- header -->
 	<header class="main-header">
+		<!-- nav -->
 		<nav class="main-navigation">
-			<ul class="site-navigation">
+			<!-- menu-part -->
+			<ul class="menu">
 				<li><a href="#">информация</a></li>
 				<li><a href="#">фото и видео</a></li>
+			</ul>
+			<!-- logo -->
+			<a class="main-header-logo">
+				<img src="img/logo.svg" alt="City of Sedona" width="140" height="72">
+			</a>
+			<!-- menu-part -->
+			<ul class="menu">
 				<li><a href="#">карта штата</a></li>
 				<li><a href="hotels.html">гостиницы</a></li>
 			</ul>
 		</nav>
-			<a class="main-header-logo">
-				<img src="img/logo.svg" alt="City of Sedona" width="140" height="72">
-			</a>	
 	</header>
+	<!-- main -->
 	<main>
-		<h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
-		<section>
+		<!-- intro -->
+		<section class="intro">
+			<h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
 			<img src="img/welcome.png" width="459" height="353" alt="Welcome to the gorgeus Sedona">
 			<p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
 		</section>
+		<!-- features -->
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества</h2>
-			<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-			<div>
-				<div>
-					<h3>Настоящий городок</h2>
+			<b>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</b>
+			<!-- features-row -->
+			<div class="features-row">
+				<div class="features-item">
+					<h3>Настоящий городок</h3>
 					<span>- № 1 -</span>
 					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 				</div>
 				<img src="img/bg-city.png">
 			</div>
+			<!-- recommendations -->
 			<ul class="recommendations">
 				<li class="recommendations-item">
-					<h3>Жильё</h3> 
+					<h3>Жильё</h3>
 					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 				</li>
 				<li class="recommendations-item">
@@ -50,34 +64,38 @@
 					<h3>Сувениры</h3>
 					<p>Не только китайского, но и местного производства!</p>
 				</li>
-			</ul>	
-			<div>
+			</ul>
+
+			<!-- features-row -->
+			<div class="features-row features-row-reverse">
 				<img src="img/bg-canyon.png">
-				<div>
+				<div class="features-item">
 					<h3>Там есть мост дьявола</h3>
 					<span>- № 2 -</span>
 					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 				</div>
 			</div>
-			<ul>	
-				<li>
+
+			<ul class="features-row">
+				<li class="features-item">
 					<h3>Небольшая площадь</h3>
 					<span>- № 3 -</span>
 					<p>Все достопримечательности находятся очень близко</p>
 				</li>
-				<li>
+				<li class="features-item">
 					<h3>Красивая дорога</h3>
 					<span>- № 4 -</span>
 					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
-				<li>
+				<li class="features-item">
 					<h3>Мало туристов</h3>
 					<span>- № 5 -</span>
 					<p>Большинство едет в гранд каньон и толпится там</p>
 				</li>
 			</ul>
 		</section>
-		<section>
+		<!-- apartments -->
+		<section class="apartments">
 			<h2 class="visually-hidden">Поиск гостиницы</h2>
 			<b>Заинтересовались?</b>
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
@@ -85,20 +103,20 @@
 			<img src="img/map.png">
 		</section>
 	</main>
-	<footer>
+	<!-- footer -->
+	<footer class="main-footer">
+		<!-- hashtag -->
 		<p>#visitSEDONA</p>
-		<ul>
-			<li><a href="#">Twitter</a></li>
-			<li><a href="#">FaceBook</a></li>
-			<li><a href="#">YouTube</a></li>
+		<!-- social -->
+		<ul class="footer-social">
+			<li><a href="#" class="social-btn">Twitter</a></li>
+			<li><a href="#" class="social-btn">FaceBook</a></li>
+			<li><a href="#" class="social-btn">YouTube</a></li>
 		</ul>
-		<p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><span>HTML Academy</span></a></p>
+		<!-- copyright -->
+		<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><span>HTML Academy</span></a></p>
 	</footer>
-    
-     <section class="modal modal-search">
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
-    </section>
 
-  </body>
+</body>
+
 </html>
