@@ -1,0 +1,121 @@
+@font-face{
+	font-family: 'PT Sans';
+	font-weight: 400;
+	font-style: normal;
+	src:local('PTSans Regular'),
+	local('PTSans-Regular'),
+	url(../fonts/ptsans.woff2) format('woff2'),
+	url(../fonts/ptsans.woff) format('woff'),
+	url(../fonts/ptsans.ttf) format('ttf');
+}
+
+@font-face{
+	font-family:'PT Sans';
+	font-weight: 700;
+	font-style: normal;
+	src:local('PTSans Bold'),
+	local('PTSans-Bold'),
+	url(../fonts/ptsansbold.woff2) format('woff2'),
+	url(../fonts/ptsansbold.woff) format('woff'),
+	url(../fonts/ptsansbold.ttf) format('ttf');
+}
+
+
+.page {
+	font-family:'PTSans Regular', 'Arial', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #333333;
+	background-color:#ffffff;
+}
+/* header */
+.main-navigation a {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	text-decoration: none;
+}
+/* intro */
+.intro {
+
+}
+/* features */
+.lead-text {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.features h3 {
+	font-size: 21px;
+	color: #000000;
+}
+
+.features ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.features-promo .features-item {
+	color: #ffffff;
+	background-color: #81b3d2;
+}
+
+.features-promo .promo-title {
+	color: #ffffff;
+}
+/* apartments */
+.apartments b {
+	font-size: 30px;
+	line-height: 36px;
+	color: #000000;
+}
+
+.apartments p {
+	line-height: 24px;
+}
+
+.btn {
+	font:inherit;
+	color: #ffffff;
+	font-size: 21px;
+	line-height: 26px;
+	background-color: #766357;
+	text-decoration: none;
+	border:none;
+}
+.popup {
+	color: #000000;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.popup input[type="text"],
+.popup input[type="number"] {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	color: inherit;
+	font:inherit;
+	text-transform: uppercase;
+}
+
+.btn-search {
+	background-color: #81b3d2;
+	cursor: pointer;
+	font-weight: 400;
+}
+/* footer */
+.main-footer p {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+/*.footer-social {
+	font-size: 0;
+}*/

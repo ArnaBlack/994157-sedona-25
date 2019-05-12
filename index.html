@@ -6,9 +6,11 @@
 	<meta name="keywords" content="отдых, маленький городок, красивое место">
 	<meta name="description" content="Городок Седона с красивыми видами">
 	<title>HTML Academy: Седона</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page page-main">
 	<!-- header -->
 	<header class="main-header">
 		<!-- nav -->
@@ -35,16 +37,16 @@
 		<section class="intro">
 			<h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
 			<img src="img/welcome.png" width="459" height="353" alt="Welcome to the gorgeus Sedona">
-			<p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
 		</section>
 		<!-- features -->
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества</h2>
-			<b>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</b>
+			<p class="lead-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+			<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 			<!-- features-row -->
-			<div class="features-row">
+			<div class="features-promo">
 				<div class="features-item">
-					<h3>Настоящий городок</h3>
+					<h3 class="promo-title">Настоящий городок</h3>
 					<span>- № 1 -</span>
 					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 				</div>
@@ -67,10 +69,10 @@
 			</ul>
 
 			<!-- features-row -->
-			<div class="features-row features-row-reverse">
+			<div class="features-promo features-promo-reverse">
 				<img src="img/bg-canyon.png">
 				<div class="features-item">
-					<h3>Там есть мост дьявола</h3>
+					<h3 class="promo-title">Там есть мост дьявола</h3>
 					<span>- № 2 -</span>
 					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 				</div>
@@ -99,7 +101,30 @@
 			<h2 class="visually-hidden">Поиск гостиницы</h2>
 			<b>Заинтересовались?</b>
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-			<a href="#">поиск гостиницы в седоне</a>
+			<a class="btn" href="#">поиск гостиницы в седоне</a>
+			<div class="popup popup-show">
+				<form class="search-form" action="#" method="post">
+					<p>
+						<label for="checkin">дата заезда</label>
+						<input type="text" id="checkin" name="checkin" value="24 апреля 2017">
+						<span class="kalendar"></span>
+					</p>
+					<p>
+						<label for="checkout">дата выезда</label>
+						<input type="text" id="checkout" name="checkout" value="4 июля 2017">
+						<span class="kalendar"></span>
+					</p>
+					<p>
+						<label for="grownups">взрослые</label>
+						<input type="number" id="grownups" name="grownups">
+					</p>
+					<p>
+						<label for="children">дети</label>
+						<input type="number" id="children" name="children">
+					</p>
+					<input type="submit" class="btn btn-search" value="найти">					
+				</form>
+			</div>
 			<img src="img/map.png">
 		</section>
 	</main>

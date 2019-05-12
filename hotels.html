@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HTML Academy: Седона</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page">
 	<!-- header -->
 	<header class="main-header">
 		<!-- nav -->
@@ -27,24 +29,75 @@
 	</header>
 	<!-- main -->
 	<main>
+		<h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
 		<!-- filters -->
 		<section class="filters">
-				<div class="apartment-content"></div>
-				<div class="apartment-type"></div>
-				<div class="apartment-cost"></div>
+			<h2 class="visually-hidden">Фильтры для поиска</h2>
+			<form class="filters-form" method="post" action="/sedona-mail">
+					<!-- apartment-content -->
+					<fieldset class="apartment-content">
+						<legend>Инфраструктура:</legend>
+						<ul role="none">
+							<li>
+								<input type="checkbox" id="apartment-content-pool">
+								<label for="apartment-content-pool">Бассейн</label>
+							</li>	
+							<li>	
+								<input type="checkbox" id="apartment-content-parking">
+								<label for="apartment-content-parking">Парковка</label>
+							</li>	
+							<li>		
+								<input type="checkbox" id="apartment-content-wifi">	
+								<label for="apartment-content-wifi">wi-fi</label>
+							</li>
+						</ul>														
+					</fieldset>
+					<!-- apartment-type --> 
+					<fieldset class="apartment-type">
+						<legend>Тип жилья:</legend>
+						<ul role="none">
+							<li>
+								<input type="checkbox" id="apartment-type-hotel">
+								<label for="apartment-type-hotel">гостиница</label>
+							</li>	
+							<li>	
+								<input type="checkbox" id="apartment-type-motel">
+								<label for="apartment-type-motel">мотель</label>
+							</li>	
+							<li>		
+								<input type="checkbox" id="apartment-type-apartaments">	
+								<label for="apartment-type-apartaments">апартаменты</label>
+							</li>	
+						</ul>					
+					</fieldset>
+					<!-- apartment-cost -->
+					<fieldset class="apartment-cost">
+						<legend>Стоимость в сутки (Р):</legend>
+						<p>
+							<span>от 0</span>
+							<span>до 3000</span>
+						</p>
+						<input type="range" name="daycost" id="daycost" min="0" max="3000" step="100">
+						<input class="btn filter-btn" type="submit" value="показать">
+					</fieldset>
+			</form>			
 		</section>
+		<!-- result of search -->
 		<section class="result">
 			<h2 class="visually-hidden">Результаты поиска</h2>
-			<p class="result-title">найдено:<span class="result-count">3</span></p>
-			<p>сортировка:</p>
-			<ul class="result-sort">
-				<li>по цене</li>
-				<li>по типу</li>
-				<li>по рейтингу</li>
-				<li>
-					<span>по возрастанию</span>
-					<span>по убыванию</span>
-				</li>
+			<div class="result-wrap-top">
+				<p class="result-title">найдено:<span class="result-count">3</span></p>
+				<p>сортировка:</p>
+				<ul class="result-sort">
+					<li>по цене</li>
+					<li>по типу</li>
+					<li>по рейтингу</li>
+					<li>
+						<span>по возрастанию</span>
+						<span>по убыванию</span>
+					</li>
+				</ul>
+			</div>		
 			<!--apartment-list-->
 			<ul class="apartment-list">
 				<li class="apartment-item">
@@ -80,7 +133,7 @@
 				<li class="apartment-item">
 					<!--data-->
 					<div class="apartment-wrap">
-						<img src="" class="preview" alt="Desert Quail Inn" width="135" height="90">
+						<img src="img/desert.jpg" class="preview" alt="Desert Quail Inn" width="135" height="90">
 						<h3 class="apartment-item-head">Desert Quail Inn</h3>
 						<p class="apartment-item-text">мотель<span>от 3000 р.</span></p>
 						<p class="apartament-action">
@@ -107,7 +160,7 @@
 				<li class="apartment-item">
 					<!--data-->
 					<div class="apartment-wrap">
-						<img src="" class="preview" alt="Villas at Poco Diablo" width="135" height="90">
+						<img src="img/villas.jpg" class="preview" alt="Villas at Poco Diablo" width="135" height="90">
 						<h3 class="apartment-item-head">Villas at Poco Diablo</h3>
 						<p class="apartment-item-text">апартаменты<span>от 2000 р.</span></p>
 						<p class="apartament-action">
