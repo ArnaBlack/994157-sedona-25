@@ -22,7 +22,7 @@
 			</ul>
 			<!-- logo -->
 			<a class="main-header-logo">
-				<img src="img/logo.svg" alt="City of Sedona" width="140" height="72">
+				<img src="img/logo-sedona.svg" alt="City of Sedona" width="140" height="72">
 			</a>
 			<!-- menu-part -->
 			<ul class="menu">
@@ -36,21 +36,21 @@
 		<!-- intro -->
 		<section class="intro">
 			<h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
-			<img src="img/welcome.png" width="459" height="353" alt="Welcome to the gorgeus Sedona">
+			<img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeus Sedona">
 		</section>
 		<!-- features -->
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества</h2>
 			<p class="lead-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
 			<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-			<!-- features-row -->
+			<!-- features-promo -->
 			<div class="features-promo">
 				<div class="features-item">
 					<h3 class="promo-title">Настоящий городок</h3>
-					<span>- № 1 -</span>
+					<span>&ndash; № 1 &ndash;</span>
 					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 				</div>
-				<img src="img/bg-city.png">
+				<img src="img/bg-city.jpg" alt="город Седона">
 			</div>
 			<!-- recommendations -->
 			<ul class="recommendations">
@@ -68,12 +68,12 @@
 				</li>
 			</ul>
 
-			<!-- features-row -->
+			<!-- features-promo -->
 			<div class="features-promo features-promo-reverse">
-				<img src="img/bg-canyon.png">
+				<img src="img/bg-canyon.jpg" alt="мост дьявола">
 				<div class="features-item">
 					<h3 class="promo-title">Там есть мост дьявола</h3>
-					<span>- № 2 -</span>
+					<span>&ndash; № 2 &ndash;</span>
 					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 				</div>
 			</div>
@@ -81,17 +81,17 @@
 			<ul class="features-row">
 				<li class="features-item">
 					<h3>Небольшая площадь</h3>
-					<span>- № 3 -</span>
+					<span>&ndash; № 3 &ndash;</span>
 					<p>Все достопримечательности находятся очень близко</p>
 				</li>
 				<li class="features-item">
 					<h3>Красивая дорога</h3>
-					<span>- № 4 -</span>
+					<span>&ndash; № 4 &ndash;</span>
 					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
 				<li class="features-item">
 					<h3>Мало туристов</h3>
-					<span>- № 5 -</span>
+					<span>&ndash; № 5 &ndash;</span>
 					<p>Большинство едет в гранд каньон и толпится там</p>
 				</li>
 			</ul>
@@ -101,28 +101,32 @@
 			<h2 class="visually-hidden">Поиск гостиницы</h2>
 			<b>Заинтересовались?</b>
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-			<a class="btn" href="#">поиск гостиницы в седоне</a>
+			<a class="btn btn-search" href="#">поиск гостиницы в седоне</a>
 			<div class="popup popup-show">
 				<form class="search-form" action="#" method="post">
 					<p>
-						<label for="checkin">дата заезда</label>
+						<label for="checkin">дата заезда:</label>
 						<input type="text" id="checkin" name="checkin" value="24 апреля 2017">
 						<span class="kalendar"></span>
 					</p>
 					<p>
-						<label for="checkout">дата выезда</label>
+						<label for="checkout">дата выезда:</label>
 						<input type="text" id="checkout" name="checkout" value="4 июля 2017">
 						<span class="kalendar"></span>
 					</p>
 					<p>
 						<label for="grownups">взрослые</label>
-						<input type="number" id="grownups" name="grownups">
+						<input type="number" id="grownups" name="grownups" min="1" max="5" step="1" value="2">
+						<button type="button" class="step step-up"></button>
+						<button type="button" class="step step-down"></button>
 					</p>
 					<p>
 						<label for="children">дети</label>
-						<input type="number" id="children" name="children">
+						<input type="number" id="children" name="children" min="0" max="5" step="1" value="0">
+						<button type="button" class="step step-up"></button>
+						<button type="button" class="step step-down"></button>
 					</p>
-					<input type="submit" class="btn btn-search" value="найти">					
+					<button type="submit" class="btn">найти</button>					
 				</form>
 			</div>
 			<img src="img/map.png">

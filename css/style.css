@@ -19,10 +19,34 @@
 	url(../fonts/ptsansbold.woff) format('woff'),
 	url(../fonts/ptsansbold.ttf) format('ttf');
 }
+a {
+	text-decoration: none;
+}
 
+ul {
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+
+p,
+h3,
+h2,
+h1,
+input,
+button {
+	margin: 0;
+    padding: 0;
+}
+
+fieldset {
+	margin: 0;
+    padding: 0;
+    border:none;
+}
 
 .page {
-	font-family:'PTSans Regular', 'Arial', sans-serif;
+	font-family:"PT Sans", sans-serif, Arial;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 21px;
@@ -38,6 +62,7 @@
 	line-height: 26px;
 	text-decoration: none;
 }
+
 /* intro */
 .intro {
 
@@ -55,11 +80,6 @@
 	color: #000000;
 }
 
-.features ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
 
 .features-promo .features-item {
 	color: #ffffff;
@@ -80,15 +100,6 @@
 	line-height: 24px;
 }
 
-.btn {
-	font:inherit;
-	color: #ffffff;
-	font-size: 21px;
-	line-height: 26px;
-	background-color: #766357;
-	text-decoration: none;
-	border:none;
-}
 .popup {
 	color: #000000;
 	line-height: 26px;
@@ -104,10 +115,23 @@
 	text-transform: uppercase;
 }
 
-.btn-search {
+.btn {
 	background-color: #81b3d2;
+	font-weight: 700;
+	color: #ffffff;
+	text-decoration: none;
+	border:none;
+}
+
+.apartments .btn {
+	font-size: 21px;
+	line-height: 26px;
 	cursor: pointer;
-	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.btn-search {
+	background-color: #766357;
 }
 /* footer */
 .main-footer p {
@@ -119,3 +143,59 @@
 /*.footer-social {
 	font-size: 0;
 }*/
+
+/*hotels.html*/ 
+.filters {
+	color: #ffffff;
+	background-color: #647e94;
+	background-image: url('../img/filter-background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+}
+
+.filters legend {
+	font-weight: 700;
+}
+
+.filter-btn {
+	font-weight: 400;
+	text-transform: uppercase;
+	background-color: transparent;
+}
+
+.result-title {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.result-sort {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.result-sort a {
+	color: rgba(0, 0, 0, 0.3);
+	 border-bottom: 1px dashed #81b3d2;
+	 cursor: pointer;
+}
+
+.result-sort .active {
+	color: #81b3d2;
+	border-bottom: none;
+}
+
+.apartment-item-head {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.btn-reserve {
+	background-color: #766357;
+}
+
+.apartament-rating p {
+	color: #666666;
+}
