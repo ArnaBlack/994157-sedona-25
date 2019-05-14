@@ -19,31 +19,6 @@
 	url(../fonts/ptsansbold.woff) format('woff'),
 	url(../fonts/ptsansbold.ttf) format('ttf');
 }
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style: none;
-	margin: 0;
-    padding: 0;
-}
-
-p,
-h3,
-h2,
-h1,
-input,
-button {
-	margin: 0;
-    padding: 0;
-}
-
-fieldset {
-	margin: 0;
-    padding: 0;
-    border:none;
-}
 
 .page {
 	font-family:"PT Sans", sans-serif, Arial;
@@ -55,17 +30,25 @@ fieldset {
 	background-color:#ffffff;
 }
 /* header */
+.menu {
+	list-style: none;
+}
+
 .main-navigation a {
 	color: #000000;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 26px;
-	text-decoration: none;
 }
 
 /* intro */
 .intro {
-
+	background-color: #659bc2;
+	background-image: url(../img/background-intro.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	
 }
 /* features */
 .lead-text {
@@ -74,12 +57,15 @@ fieldset {
 	font-weight: 700;
 	line-height: 26px;
 }
-
+/* features title of features-item  */
 .features h3 {
 	font-size: 21px;
 	color: #000000;
 }
 
+.recommendations {
+	list-style: none;
+}
 
 .features-promo .features-item {
 	color: #ffffff;
@@ -88,6 +74,11 @@ fieldset {
 
 .features-promo .promo-title {
 	color: #ffffff;
+}
+
+.features-row {
+	list-style: none;
+	background-color: #eeeeee;
 }
 /* apartments */
 .apartments b {
@@ -108,8 +99,7 @@ fieldset {
 
 .popup input[type="text"],
 .popup input[type="number"] {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	color: inherit;
 	font:inherit;
 	text-transform: uppercase;
@@ -139,6 +129,10 @@ fieldset {
 	line-height: 26px;
 	font-weight: 700;
 	color: #000000;
+}
+
+.footer-social {
+	list-style: none;
 }
 /*.footer-social {
 	font-size: 0;
@@ -184,6 +178,14 @@ fieldset {
 .result-sort .active {
 	color: #81b3d2;
 	border-bottom: none;
+}
+
+.raiting-list {
+	list-style:  none;
+}
+
+.apartment-list {
+	list-style: none;
 }
 
 .apartment-item-head {
