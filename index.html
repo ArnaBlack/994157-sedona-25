@@ -22,7 +22,7 @@
 			</ul>
 			<!-- logo -->
 			<a class="main-header-logo">
-				<img src="img/logo-sedona.svg" alt="City of Sedona" width="140" height="72">
+				<img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона">
 			</a>
 			<!-- menu-part -->
 			<ul class="menu">
@@ -47,10 +47,10 @@
 			<div class="features-promo">
 				<div class="features-item">
 					<h3 class="promo-title">Настоящий городок</h3>
-					<span>&ndash; № 1 &ndash;</span>
+					<span>№ 1</span>
 					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
 				</div>
-				<img src="img/bg-city.jpg" width="800" height="256" alt="город Седона">
+				<img src="img/bg-city.jpg" width="800" height="256" alt="домик в городе Седона">
 			</div>
 			<!-- recommendations -->
 			<ul class="recommendations">
@@ -73,7 +73,7 @@
 				<img src="img/bg-canyon.jpg" width="800" height="256" alt="мост дьявола">
 				<div class="features-item">
 					<h3 class="promo-title">Там есть мост дьявола</h3>
-					<span>&ndash; № 2 &ndash;</span>
+					<span>№ 2</span>
 					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 				</div>
 			</div>
@@ -81,17 +81,17 @@
 			<ul class="features-row">
 				<li class="features-item">
 					<h3>Небольшая площадь</h3>
-					<span>&ndash; № 3 &ndash;</span>
+					<span>№ 3</span>
 					<p>Все достопримечательности находятся очень близко</p>
 				</li>
 				<li class="features-item">
 					<h3>Красивая дорога</h3>
-					<span>&ndash; № 4 &ndash;</span>
+					<span>№ 4</span>
 					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
 				<li class="features-item">
 					<h3>Мало туристов</h3>
-					<span>&ndash; № 5 &ndash;</span>
+					<span>№ 5</span>
 					<p>Большинство едет в гранд каньон и толпится там</p>
 				</li>
 			</ul>
@@ -103,33 +103,33 @@
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
 			<a class="btn btn-search" href="#">поиск гостиницы в седоне</a>
 			<div class="popup popup-show">
-				<form class="search-form" action="#" method="post">
+				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 					<p>
-						<label for="checkin">дата заезда:</label>
-						<input type="text" id="checkin" name="checkin" value="24 апреля 2017">
-						<span class="kalendar"></span>
+						<label for="check-in">дата заезда:</label>
+						<input id="checkin"  type="text" name="checkin" value="24 апреля 2017">
+						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
 					</p>
 					<p>
-						<label for="checkout">дата выезда:</label>
-						<input type="text" id="checkout" name="checkout" value="4 июля 2017">
-						<span class="kalendar"></span>
+						<label for="check-out">дата выезда:</label>
+						<input  id="checkout" type="text"  name="checkout" value="4 июля 2017">
+						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
 					</p>
 					<p>
 						<label for="grownups">взрослые</label>
-						<button type="button-control" class="step step-up"></button>
-						<input type="number" id="grownups" name="grownups" min="1" max="5" step="1" value="2">
-						<button type="button-control" class="step step-down"></button>
+						<input id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2">
+            <button class="step step-up" type="button" aria-label="увеличить количество"></button>
+						<button class="step step-down" type="button" aria-label="уменьшить количество"></button>
 					</p>
 					<p>
 						<label for="children">дети</label>
-						<button type="button-control" class="step step-up"></button>
-						<input type="number" id="children" name="children" min="0" max="5" step="1" value="0">
-						<button type="button-control" class="step step-down"></button>
+						<input id="children" type="number" name="children" min="0" max="5" step="1" value="0">
+            <button class="step step-up" type="button" aria-label="увеличить количество"></button>
+						<button class="step step-down" type="button" aria-label="уменьшить количество"></button>
 					</p>
-					<button type="submit" class="btn">найти</button>					
+					<button type="submit" class="btn">найти</button>
 				</form>
 			</div>
-			<img src="img/map.png">
+			<img src="img/map.png"  width="1200" height="593" alt="США, штат Аризона, город Седона">
 		</section>
 	</main>
 	<!-- footer -->
@@ -138,12 +138,12 @@
 		<p>#visitSEDONA</p>
 		<!-- social -->
 		<ul class="footer-social">
-			<li><a href="#" class="social-btn">Twitter</a></li>
-			<li><a href="#" class="social-btn">FaceBook</a></li>
-			<li><a href="#" class="social-btn">YouTube</a></li>
+			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Твиттер">Твиттер</a></li>
+			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Фейсбук">Фейсбук</a></li>
+			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Ютюб">Ютюб</a></li>
 		</ul>
 		<!-- copyright -->
-		<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><span>HTML Academy</span></a></p>
+		<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></p>
 	</footer>
 
 </body>
