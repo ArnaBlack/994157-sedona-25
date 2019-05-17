@@ -33,40 +33,40 @@
 		<!-- filters -->
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
-			<form class="filters-form" method="post" action="/sedona-mail">
+			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 					<!-- apartment-content -->
-					<fieldset class="apartment-content">
+					<fieldset>
 						<legend>Инфраструктура:</legend>
 						<ul role="none">
-							<li>
-								<input id="apartment-content-pool" type="checkbox" checked>
-								<label for="apartment-content-pool">Бассейн</label>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-checkbox" id="filter-pool" type="checkbox" name="pool" checked>
+								<label for="filter-pool">Бассейн</label>
 							</li>
-							<li>
-								<input id="apartment-content-parking" type="checkbox">
-								<label for="apartment-content-parking">Парковка</label>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-checkbox" id="apartment-content-parking" type="checkbox" name="parking">
+								<label for="filter-parking">Парковка</label>
 							</li>
-							<li>
-								<input id="apartment-content-wifi" type="checkbox">
-								<label for="apartment-content-wifi">wi-fi</label>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-checkbox" id="filter-wifi" type="checkbox" name="wi-fi">
+								<label for="filter-wifi">wi-fi</label>
 							</li>
 						</ul>
 					</fieldset>
 					<!-- apartment-type -->
-					<fieldset class="apartment-type">
+					<fieldset>
 						<legend>Тип жилья:</legend>
 						<ul role="none">
-							<li>
-								<input id="apartment-type-hotel" type="checkbox" checked>
-								<label for="apartment-type-hotel" type="checkbox">гостиница</label>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-checkbox" id="filter-hotel" type="checkbox" name="hotel" checked>
+								<label for="filter-hotel">гостиница</label>
 							</li>
-							<li>
-								<input id="apartment-type-motel" type="checkbox" checked>
-								<label for="apartment-type-motel" type="checkbox">мотель</label>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-checkbox" id="filter-motel" type="checkbox" name="motel" checked>
+								<label for="filter-motel">мотель</label>
 							</li>
-							<li>
-								<input id="apartment-type-apartaments" type="checkbox" checked>
-								<label for="apartment-type-apartaments" type="checkbox">апартаменты</label>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-checkbox" id="filter-apartaments" name="apartaments" type="checkbox" checked>
+								<label for="filter-apartaments">апартаменты</label>
 							</li>
 						</ul>
 					</fieldset>
@@ -85,19 +85,33 @@
 		<!-- result of search -->
 		<section class="result">
 			<h2 class="visually-hidden">Результаты поиска гостиниц</h2>
-			<div class="result-wrap-top">
-				<p class="result-title">найдено:<span class="result-count">3</span></p>
-				<p>сортировка:</p>
-				<ul class="result-sort">
-					<li><a class="active" href="#">по цене</a></li>
-					<li><a href="#">по типу</a></li>
-					<li><a href="#">по рейтингу</a></li>
-					<li aria-label="метод сортировки">
-						<button class="btn-sort" type="button" aria-label="по возрастанию"></button>
-						<button class="btn-sort" type="button" aria-label="по убыванию"></button>
-					</li>
-				</ul>
-			</div>
+			<form class="sort-form" action="#" method="get">
+        <!-- sort -->
+        <fieldset>
+  				<p class="result-title">найдено:<span class="result-count">3</span></p>
+  				<p>сортировка:</p>
+          <ul aria-label="варианты сортировки">
+  				<li>
+            <label for="sort-price">по цене</label>
+            <input class="visually-hidden sort-input-radio" id="sort-price" type="radio" name="sort-variants" checked>
+          </li>
+          <li>
+            <label for="sort-type">по типу</label>
+            <input class="visually-hidden sort-input-radio" id="sort-type" type="radio" name="sort-variants">
+          </li>
+          <li>
+            <label for="sort-rate">по рейтингу</label>
+            <input class="visually-hidden sort-input-radio" id="sort-rate" type="radio" name="sort-variants">
+          </li>
+          </ul>
+        </fieldset>
+				<fieldset aria-label="направление сортировки">
+          <label for="direction-up"></label>
+          <input class="visually-hidden btn-sort" id="direction-up" type="radio" name="direction" aria-label="по возрастанию">
+          <label for="direction-down"></label>
+          <input class="visually-hidden btn-sort" id="direction-down" type="radio" name="direction" aria-label="по убыванию" checked>
+				</fieldset>
+			</form>
 			<!--apartment-list-->
 			<ul class="apartment-list">
 				<li class="apartment-item">

@@ -162,6 +162,10 @@
   text-transform: uppercase;
   background-color: transparent;
 }
+.sort-form {
+  font-size: 12px;
+  line-height: 18px;
+}
 
 .result-title {
   font-size: 21px;
@@ -169,12 +173,8 @@
   font-weight: 700;
 }
 
-.result-sort {
-  font-size: 12px;
-  line-height: 18px;
-}
 
-.result-sort a {
+/*.result-sort a {
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2;
   cursor: pointer;
@@ -184,7 +184,7 @@
   color: #81b3d2;
   border-bottom: none;
 }
-
+*/
 .raiting-list {
   list-style: none;
 }
