@@ -85,33 +85,21 @@
 		<!-- result of search -->
 		<section class="result">
 			<h2 class="visually-hidden">Результаты поиска гостиниц</h2>
-			<form class="sort-form" action="#" method="get">
-        <!-- sort -->
-        <fieldset>
-  				<p class="result-title">найдено:<span class="result-count">3</span></p>
-  				<p>сортировка:</p>
-          <ul aria-label="варианты сортировки">
-  				<li>
-            <label for="sort-price">по цене</label>
-            <input class="visually-hidden sort-input-radio" id="sort-price" type="radio" name="sort-variants" checked>
-          </li>
+      <div class="result-wrap-top">
+        <p class="result-title">найдено:<span class="result-count">3</span></p>
+        <p>сортировка:</p>
+        <ul class="result-sort" >
+          <li><a class="active" href="#">по цене</a></li>
+          <li><a href="#">по типу</a></li>
+          <li><a href="#">по рейтингу</a></li>
           <li>
-            <label for="sort-type">по типу</label>
-            <input class="visually-hidden sort-input-radio" id="sort-type" type="radio" name="sort-variants">
-          </li>
-          <li>
-            <label for="sort-rate">по рейтингу</label>
-            <input class="visually-hidden sort-input-radio" id="sort-rate" type="radio" name="sort-variants">
-          </li>
-          </ul>
-        </fieldset>
-				<fieldset aria-label="направление сортировки">
-          <label for="direction-up"></label>
-          <input class="visually-hidden btn-sort" id="direction-up" type="radio" name="direction" aria-label="по возрастанию">
-          <label for="direction-down"></label>
-          <input class="visually-hidden btn-sort" id="direction-down" type="radio" name="direction" aria-label="по убыванию" checked>
-				</fieldset>
-			</form>
+        </ul>
+        <div aria-label="метод сортировки">
+            <a class="btn-sort" href="#" aria-label="по возрастанию"></a>
+            <a class="btn-sort" href="#" aria-label="по убыванию"></a>
+        </div>
+
+      </div>
 			<!--apartment-list-->
 			<ul class="apartment-list">
 				<li class="apartment-item">
