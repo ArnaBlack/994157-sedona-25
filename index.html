@@ -53,7 +53,7 @@
 				<img src="img/bg-city.jpg" width="800" height="256" alt="домик в городе Седона">
 			</div>
 			<!-- recommendations -->
-			<ul class="recommendations">
+			<ul class="recommendations" aria-label="наши рекомендации">
 				<li class="recommendations-item">
 					<h3>Жильё</h3>
 					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -106,27 +106,27 @@
 				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 					<p>
 						<label for="check-in">дата заезда:</label>
-						<input id="checkin"  type="text" name="checkin" value="24 апреля 2017">
+						<input id="checkin"  type="text" name="checkin" aria-label="выбрать дату заезда" value="24 апреля 2017">
 						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
 					</p>
 					<p>
 						<label for="check-out">дата выезда:</label>
-						<input  id="checkout" type="text"  name="checkout" value="4 июля 2017">
+						<input  id="checkout" type="text"  name="checkout" aria-label="выбрать дату выезда" value="4 июля 2017">
 						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
 					</p>
 					<p>
 						<label for="grownups">взрослые</label>
-						<input id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2">
+						<input id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
             <button class="step step-up" type="button" aria-label="увеличить количество"></button>
 						<button class="step step-down" type="button" aria-label="уменьшить количество"></button>
 					</p>
 					<p>
 						<label for="children">дети</label>
-						<input id="children" type="number" name="children" min="0" max="5" step="1" value="0">
+						<input id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
             <button class="step step-up" type="button" aria-label="увеличить количество"></button>
 						<button class="step step-down" type="button" aria-label="уменьшить количество"></button>
 					</p>
-					<button type="submit" class="btn">найти</button>
+					<button class="btn" type="submit">найти</button>
 				</form>
 			</div>
 			<img src="img/map.png"  width="1200" height="593" alt="США, штат Аризона, город Седона">

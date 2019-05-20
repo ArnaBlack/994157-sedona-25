@@ -17,18 +17,18 @@
 				<li><a href="#">фото и видео</a></li>
 			</ul>
 			<!-- logo -->
-			<a class="main-header-logo">
+			<a class="main-header-logo" href="index.html">
 				<img src="img/logo-sedona.svg" alt="City of Sedona" width="140" height="72">
 			</a>
 			<!-- menu-part -->
 			<ul class="menu">
 				<li><a href="#">карта штата</a></li>
-				<li><a class="active" href="hotels.html">гостиницы</a></li>
+				<li class="menu-active"><a href="hotels.html">гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
 	<!-- main -->
-	<main class="page page-hotels">
+	<main>
 		<h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
 		<!-- filters -->
 		<section class="filters">
@@ -72,7 +72,7 @@
 					</fieldset>
 					<!-- apartment-cost -->
 					<fieldset class="apartment-cost">
-						<legend>Стоимость в сутки (Р):</legend>
+						<label for="daycost">Стоимость в сутки (Р):</label>
 						<p>
 							<span>от 0</span>
 							<span>до 3000</span>
@@ -88,15 +88,14 @@
       <div class="result-wrap-top">
         <p class="result-title">найдено:<span class="result-count">3</span></p>
         <p>сортировка:</p>
-        <ul class="result-sort" >
+        <ul class="result-sort">
           <li><a class="active" href="#">по цене</a></li>
           <li><a href="#">по типу</a></li>
           <li><a href="#">по рейтингу</a></li>
-          <li>
         </ul>
         <div aria-label="метод сортировки">
-            <a class="btn-sort" href="#" aria-label="по возрастанию"></a>
-            <a class="btn-sort" href="#" aria-label="по убыванию"></a>
+            <a class="btn-sort btn-up" href="#" aria-label="по возрастанию"></a>
+            <a class="btn-sort btn-down btn-active" href="#" aria-label="по убыванию"></a>
         </div>
 
       </div>
