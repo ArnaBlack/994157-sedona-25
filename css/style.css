@@ -1,27 +1,26 @@
 @font-face{
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
-  src: local('PTSans Regular'),
-  local('PTSans-Regular'),
-  url(../fonts/ptsans.woff2) format('woff2'),
+  src:
   url(../fonts/ptsans.woff) format('woff'),
-  url(../fonts/ptsans.ttf) format('ttf');
+  url(../fonts/ptsans.woff2) format('woff2');
 }
 
 @font-face{
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: local('PTSans Bold'),
-  local('PTSans-Bold'),
-  url(../fonts/ptsansbold.woff2) format('woff2'),
+  src:
   url(../fonts/ptsansbold.woff) format('woff'),
-  url(../fonts/ptsansbold.ttf) format('ttf');
+  url(../fonts/ptsansbold.woff2) format('woff2');
 }
 
-.page {
-  font-family:"PT Sans","Arial", sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:"PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -30,9 +29,50 @@
 
   background-color: #ffffff;
 }
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #669ec0;
+}
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
 /* header */
+.main-navigation {
+  color: #000000;
+}
+
 .menu {
   list-style: none;
+}
+
+.menu:first-of-type a {
+  text-align: left;
+}
+
+.menu:last-of-type a {
+  text-align: right;
 }
 
 .main-navigation a {
@@ -40,8 +80,18 @@
   font-weight: 700;
   line-height: 26px;
   color: #000000;
+
+  background-color: #ffffff;
 }
 
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 /* intro */
 .intro {
   background-color: #659bc2;
@@ -56,12 +106,22 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-   color: #000000;
+  color: #000000;
+  text-align: center;
 }
+
 /* features title of features-item  */
+.features {
+  text-align: center;
+}
 .features h3 {
   font-size: 21px;
   color: #000000;
+}
+
+.features-item,
+.recommendations-item {
+  /*text-align: center;*/
 }
 
 .recommendations {
@@ -83,6 +143,9 @@
   background-color: #eeeeee;
 }
 /* apartments */
+.apartments {
+  text-align: center;
+}
 .apartments b {
   font-size: 30px;
   line-height: 36px;
@@ -91,6 +154,18 @@
 
 .apartments p {
   line-height: 24px;
+}
+.btn-search {
+  background-color: #766357;
+}
+
+.btn-search:hover,
+.btn-search:focus{
+  background-color: #604e43;
+}
+
+.btn-search:active{
+  background-color: #503e33;
 }
 
 .popup {
@@ -106,43 +181,73 @@
   font: inherit;
   color: inherit;
   text-transform: uppercase;
-}
 
-.btn {
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-
-  background-color: #81b3d2;
+  background-color: #f2f2f2;
   border:none;
 }
+
+.popup input[type="text"]:hover,
+.popup input[type="number"]:hover {
+  background-color: #ebebeb;
+}
+
+.popup input[type="text"]:focus,
+.popup input[type="number"]:focus {
+  background-color: #ffffff;
+  outline: 2px solid #e5e5e5;
+}
+
+.calendar,
+.step {
+  font-size: 0;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+/*.calendar {
+  width: 21px;
+  height: 22px;
+
+  background-image: url(../img/calendar.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+}*/
 
 .apartments .btn {
   font-size: 21px;
   line-height: 26px;
-  cursor: pointer;
-  text-transform: uppercase;
 }
 
-.btn-search {
-  background-color: #766357;
-}
 /* footer */
 .main-footer p {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  text-align: center;
 }
 
 .footer-social {
+  text-align: center;
+
   list-style: none;
+}
+
+.footer-social a,
+.footer-copyright a {
+  color: #000000;
 }
 /*.footer-social {
   font-size: 0;
 }*/
 
-/*hotels.html*/
+/*hotels.html доделать*/
+
+.menu-active a {
+  color: #766357;
+}
 .filters {
   color: #ffffff;
 
@@ -157,16 +262,34 @@
   list-style: none;
 }
 
+.filters fieldset {
+  border: none;
+}
+
 .filters legend,
 .apartment-cost label {
   font-weight: 700;
 }
 
+.filter-input:disabled + label {
+  color: #6a6a6a;
+}
+
 .filter-btn {
   font-weight: 400;
-  text-transform: uppercase;
+
   background-color: transparent;
+  border: 2px solid #ffffff;
 }
+
+.filter-btn:hover,
+.filter-btn:focus,
+.filter-btn:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
 .result-wrap-top {
   font-size: 12px;
   line-height: 18px;
@@ -179,6 +302,8 @@
 }
 
 .result-sort {
+  color: rgba(0, 0, 0, 0.3);
+
   list-style: none;
 }
 
@@ -186,6 +311,18 @@
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2;
   cursor: pointer;
+}
+
+.result-sort a:hover {
+  color: #81b3d2;
+
+  border-bottom: 1px dashed #81b3d2;
+}
+
+.result-sort a:active {
+  color: #000000;
+
+  border-bottom: transparent;
 }
 
 .result-sort .active {
@@ -201,16 +338,46 @@
   list-style: none;
 }
 
+.apartment-item-head a {
+  color: #000000;
+}
+
+.apartment-item-head a:hover {
+  color: #81b3d2;
+}
+
+.apartment-item-head a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.apartament-action .btn {
+  color: #ffffff;
+}
+
+.btn-reserve {
+  color: #ffffff;
+  background-color: #766357;
+}
+
+
+.btn-reserve:hover,
+.btn-reserve:focus {
+  background-color: #604e43;
+}
+
+.btn-reserve:active {
+  background-color: #503e33;
+}
+
 .apartment-item-head {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.btn-reserve {
-  background-color: #766357;
-}
 
 .apartament-rating p {
   color: #666666;
+
+  background-color: #f2f2f2;
 }
