@@ -16,9 +16,17 @@
   url(../fonts/ptsansbold.woff2) format('woff2');
 }
 
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
+  /*padding: 0 40px;
+  width: 1200px;*/
 
   font-family:"PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -27,7 +35,18 @@ body {
   text-transform: uppercase;
   color: #333333;
 
+  background-color: #f2f2f2;
+}
+
+*,
+*::after,
+*::before {
+box-sizing: inherit;
+}
+
+.container {
   background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 a {
@@ -59,11 +78,12 @@ a {
 }
 
 /* header */
-.main-navigation {
-  color: #000000;
-}
-
 .menu {
+  padding: 0;
+  margin: 0;
+
+  color: #000000;
+
   list-style: none;
 }
 
@@ -75,7 +95,7 @@ a {
   text-align: right;
 }
 
-.main-navigation a {
+.menu a {
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
@@ -84,12 +104,12 @@ a {
   background-color: #ffffff;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+.menu a:hover,
+.menu a:focus {
   color: #81b3d2;
 }
 
-.main-navigation a:active {
+.menu a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 /* intro */
@@ -125,6 +145,9 @@ a {
 }
 
 .recommendations {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
@@ -139,6 +162,9 @@ a {
 }
 
 .features-row {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
   background-color: #eeeeee;
 }
@@ -168,14 +194,14 @@ a {
   background-color: #503e33;
 }
 
-.popup {
+.search-form {
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
-.popup input[type="text"],
-.popup input[type="number"] {
+.search-form input[type="text"],
+.search-form input[type="number"] {
   box-sizing: border-box;
 
   font: inherit;
@@ -186,15 +212,19 @@ a {
   border:none;
 }
 
-.popup input[type="text"]:hover,
-.popup input[type="number"]:hover {
+.search-form input[type="text"]:hover,
+.search-form input[type="number"]:hover {
   background-color: #ebebeb;
 }
 
-.popup input[type="text"]:focus,
-.popup input[type="number"]:focus {
+.search-form input[type="text"]:focus,
+.search-form input[type="number"]:focus {
   background-color: #ffffff;
   outline: 2px solid #e5e5e5;
+}
+
+.search-form input[type="text"]::placeholder {
+  color: inherit;
 }
 
 .step {
@@ -271,8 +301,7 @@ a {
   border: none;
 }
 
-.filters legend,
-.apartment-cost label {
+.filters legend {
   font-weight: 700;
 }
 
@@ -295,9 +324,33 @@ a {
   background-color: #ffffff;
 }
 
+.range-daycost {
+  border: 2px solid #ffffff;
+}
+
+.range-daycost input[type="number"] {
+  font: inherit;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: none;
+}
+
+.range-daycost input[type="number"]:focus {
+  background-color: transparent;
+  border: none;
+}
+
+
 .result-wrap-top {
   font-size: 12px;
   line-height: 18px;
+}
+.result ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .result-title {
@@ -308,14 +361,11 @@ a {
 
 .result-sort {
   color: rgba(0, 0, 0, 0.3);
-
-  list-style: none;
 }
 
 .result-sort a {
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2;
-  cursor: pointer;
 }
 
 .result-sort a:hover {
@@ -333,6 +383,10 @@ a {
 .result-sort .active {
   color: #81b3d2;
   border-bottom: none;
+}
+
+.btn-sort {
+  color: #000000;
 }
 
 .raiting-list {
