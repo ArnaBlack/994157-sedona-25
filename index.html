@@ -10,26 +10,28 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page">
-  <div class="container">
+<body>
+ <!-- <div class="wrapper"> -->
 	<!-- header -->
   	<header class="main-header">
   		<!-- nav -->
   		<nav class="main-navigation">
-  			<!-- menu-part -->
-  			<ul class="menu">
-  				<li><a href="#">информация</a></li>
-  				<li><a href="#">фото и видео</a></li>
-  			</ul>
-  			<!-- logo -->
-  			<a class="main-header-logo" aria-label="Логотип города Седона">
-  				<img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона">
-  			</a>
-  			<!-- menu-part -->
-  			<ul class="menu">
-  				<li><a href="#">карта штата</a></li>
-  				<li><a href="hotels.html">гостиницы</a></li>
-  			</ul>
+        <div class="container">
+    			<!-- menu-part -->
+    			<ul class="menu">
+    				<li><a href="#">информация</a></li>
+    				<li><a href="#">фото и видео</a></li>
+    			</ul>
+    			<!-- logo -->
+    			<a class="main-header-logo" aria-label="Логотип города Седона">
+    				<img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона">
+    			</a>
+    			<!-- menu-part -->
+    			<ul class="menu">
+    				<li><a href="#">карта штата</a></li>
+    				<li><a href="hotels.html">гостиницы</a></li>
+    			</ul>
+        </div>
   		</nav>
   	</header>
   	<!-- main -->
@@ -107,24 +109,24 @@
   				<p>
   					<label for="check-in">дата заезда:</label>
   					<input id="check-in"  type="text" name="check-in" aria-label="выбрать дату заезда" placeholder="24 апреля 2017">
-  					<button class="calendar" type="button" aria-label="календарь для выбора даты">календарь для выбора даты</button>
+  					<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
   				</p>
   				<p>
   					<label for="check-out">дата выезда:</label>
   					<input  id="check-out" type="text"  name="check-out" aria-label="выбрать дату выезда" placeholder="4 июля 2017">
-  						<button class="calendar" type="button" aria-label="календарь для выбора даты">календарь для выбора даты</button>
+  						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
   				</p>
   				<p>
   					<label for="grownups">взрослые</label>
   					<input id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
-             <button class="step step-up" type="button" aria-label="увеличить количество">увеличить количество</button>
-  					<button class="step step-down" type="button" aria-label="уменьшить количество">уменьшить количество</button>
+             <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+  					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
   				</p>
   				<p>
   					<label for="children">дети</label>
   					<input id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
-            <button class="step step-up" type="button" aria-label="увеличить количество">увеличить количество</button>
-  					<button class="step step-down" type="button" aria-label="уменьшить количество">уменьшить количество</button>
+            <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+  					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
   				</p>
   				<button class="btn" type="submit" aria-label="найти гостиницы">найти</button>
   			</form>
@@ -133,18 +135,20 @@
   	</main>
   	<!-- footer -->
   	<footer class="main-footer">
+      <div class="container">
   		<!-- hashtag -->
-  		<p>#visitSEDONA</p>
-  		<!-- social -->
-  		<ul class="footer-social">
-  			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Твиттер">Твиттер</a></li>
-  			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Фейсбук">Фейсбук</a></li>
-  			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Ютюб">Ютюб</a></li>
-  		</ul>
-  		<!-- copyright -->
-  		<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="перейти на сайт разработчиков">HTML Academy</a></p>
+    		<p class="hashtag">#visitSEDONA</p>
+    		<!-- social -->
+    		<ul class="footer-social">
+    			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Твиттер">Твиттер</a></li>
+    			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Фейсбук">Фейсбук</a></li>
+    			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Ютюб">Ютюб</a></li>
+    		</ul>
+    		<!-- copyright -->
+    		<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="перейти на сайт разработчиков">HTML Academy</a></p>
+      </div>
   	</footer>
-  </div>
+ <!-- </div> -->
 </body>
 
 </html>
