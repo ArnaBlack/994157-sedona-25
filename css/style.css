@@ -97,7 +97,7 @@ a {
 /* header */
 
 .main-navigation .container {
-   position: relative;
+  position: relative;
 
   display: flex;
 
@@ -180,11 +180,10 @@ a {
   color: #000000;
 }
 
-.features-item  {
- /* padding-top: 50px;
+.features-item {
+  /* padding-top: 50px;
   padding-bottom: 60px;*/
   width: 400px;
-
 }
 
 .recommendations {
@@ -193,9 +192,10 @@ a {
   margin-bottom: 85px;
   padding: 0;
   padding-top: 60px;
-  justify-content: space-between;
 
   list-style: none;
+
+  justify-content: space-between;
 }
 
 .recommendations-item {
@@ -218,19 +218,21 @@ a {
 }
 
 .features-row {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
 
   background-color: #eeeeee;
 
   list-style: none;
+
+  justify-content: space-between;
 }
 /* apartments */
 .apartments {
-  text-align: center;
   padding-top: 55px;
+
+  text-align: center;
 }
 .apartments b {
   font-size: 30px;
@@ -316,7 +318,7 @@ a {
 }
 
 /* footer */
-.main-footer .container{
+.main-footer .container {
   display: flex;
   padding-top: 36px;
   padding-bottom: 36px;
@@ -325,6 +327,7 @@ a {
 .main-footer .hashtag {
   margin: 0;
   margin-right: 255px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -334,9 +337,10 @@ a {
 }
 
 .footer-social {
+  width: 150px;
   margin: 0;
   padding: 0;
-  width: 150px;
+
   text-align: center;
 
   list-style: none;
@@ -417,29 +421,38 @@ a {
 
 
 .result-wrap-top {
+  display: flex;
+  padding: 30px 0;
+
   font-size: 12px;
   line-height: 18px;
+
   border-bottom: 1px solid #e5e5e5;
-  padding: 30px 0;
-  display: flex;
+
   justify-content: space-between;
 }
 
 .result-column {
+  display: flex;
+  width: 520px;
+}
 
+.result-column p {
+  margin: 0;
 }
 
 .result-title {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-  margin: 0;
 }
 
 .result-sort {
-  color: rgba(0, 0, 0, .3);
   margin: 0;
   padding: 0;
+
+  color: rgba(0, 0, 0, .3);
+
   list-style: none;
 }
 
@@ -470,6 +483,7 @@ a {
 .sort-controls {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -480,13 +494,15 @@ a {
 .apartment-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .apartment-item {
   display: flex;
-  border-bottom: 1px solid #e5e5e5;
   padding: 30px 0;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .apartment-wrap {
@@ -499,11 +515,12 @@ a {
 
 
 .apartment-item-head {
+  margin: 0;
+  margin-bottom: 12px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-  margin: 0;
-  margin-bottom: 12px;
 }
 
 .apartment-item-head a {
@@ -533,8 +550,9 @@ a {
 }
 
 .apartament-action .btn {
-  color: #ffffff;
   padding: 5px 15px;
+
+  color: #ffffff;
 }
 
 .apartament-rating {
@@ -543,19 +561,21 @@ a {
 
 
 .raiting-list {
-  list-style: none;
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 45px;
+
+  list-style: none;
 }
 
 .apartament-rating p {
-  color: #666666;
   margin: 0;
   padding-top: 3px;
+  padding-right: 12px;
   padding-bottom: 3px;
   padding-left: 14px;
-  padding-right: 12px;
+
+  color: #666666;
 
   background-color: #f2f2f2;
 }
@@ -575,4 +595,3 @@ a {
 .btn-reserve:active {
   background-color: #503e33;
 }
-
