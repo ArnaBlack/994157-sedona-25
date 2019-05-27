@@ -39,6 +39,7 @@ body {
 
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
+
 }
 
 *,
@@ -51,7 +52,14 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
+img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden {
   position: absolute;
 
   overflow: hidden;
@@ -61,10 +69,19 @@ a {
   margin: -1px;
   padding: 0;
 
+  white-space: nowrap;
+
   border: 0;
+
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
 }
 
 .btn {
+  display: inline-block;
+  padding: 16px;
+
   font: inherit;
   font-weight: 700;
   text-transform: uppercase;
@@ -87,6 +104,10 @@ a {
   background-color: #5496bd;
 }
 
+.main-page {
+  position: relative;
+}
+
 /* header */
 
 .main-navigation {
@@ -94,26 +115,32 @@ a {
 
   display: flex;
   justify-content: space-between;
-  padding: 0 72px;
 }
 
 .menu {
-  /*пока для сетки */
-  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  width: 478px;
   margin: 0;
   padding: 0;
 
   color: #000000;
 
   list-style: none;
+
+  flex-wrap: wrap;
 }
 
 
 .menu a {
+  display: inline-block;
+  padding: 15px 70px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
   color: #000000;
+  vertical-align: middle;
 
   background-color: #ffffff;
 }
@@ -129,6 +156,7 @@ a {
 
 .main-header-logo {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   left: 0;
@@ -174,12 +202,11 @@ a {
 /* features */
 .features {
   padding-top: 60px;
-
-  text-align: center;
 }
 
 .lead-text {
-  margin: 0;
+  width: 445px;
+  margin: 0 auto;
   margin-bottom: 35px;
 
   font-size: 21px;
@@ -200,6 +227,8 @@ a {
 
 .features > p:nth-child(3) {
   margin-bottom: 50px;
+
+  text-align: center;
 }
 
 .features-item {
@@ -208,19 +237,19 @@ a {
   padding-right: 48px;
   padding-bottom: 65px;
   padding-left: 48px;
+
+  text-align: center;
 }
 
 .features-item p {
   margin: 0;
 }
 
+
+
 .features-item span {
   display: block;
   margin-bottom: 30px;
-}
-
-.recommendations-item p {
-  margin: 0;
 }
 
 .recommendations {
@@ -228,6 +257,8 @@ a {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+
+  text-align: center;
 
   list-style: none;
 }
@@ -245,14 +276,15 @@ a {
 .recommendations-item::before {
   position: absolute;
   top: 60px;
-  right: 0;
-  left: 0;
+  left: 50%;
 
   width: 75px;
   height: 76px;
   margin: auto;
 
   content: '';
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .recommendations-house::before {
@@ -272,6 +304,11 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+.recommendations-item p {
+  margin: 0;
+}
+
 
 .features-promo {
   display: flex;
@@ -307,6 +344,7 @@ a {
   padding-right: 70px;
   padding-left: 71px;
 }
+
 /* apartments */
 .apartments {
   position: relative;
@@ -331,7 +369,15 @@ a {
 
   line-height: 24px;
 }
+
+.apartments .btn {
+  font-size: 21px;
+  line-height: 26px;
+}
+
 .btn-search {
+  padding: 20px 140px;
+
   background-color: #766357;
 }
 
@@ -361,8 +407,35 @@ a {
   background-color: #ffffff;
 }
 
-.form-group {
+.residence-item {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: 458px;
+  margin: 0;
   margin-bottom: 30px;
+
+  align-items: center;
+}
+.count-grownups {
+  width: 226px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.count-children {
+  width: 179px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.count-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 54px;
 }
 
 .search-form input[type='text'],
@@ -379,6 +452,15 @@ a {
 
 .date-input {
   width: 346px;
+  padding-top: 6px;
+  padding-right: 40px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+}
+
+.count-input {
+  width: 38px;
+  padding: 6px 15px;
 }
 
 .search-form input[type='text']:hover,
@@ -392,46 +474,133 @@ a {
   background-color: #ffffff;
 }
 
+.search-form input[type='text']::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.search-form input[type='text']:-ms-input-placeholder {
+  color: inherit;
+}
+
+.search-form input[type='text']::-ms-input-placeholder {
+  color: inherit;
+}
+
 .search-form input[type='text']::placeholder {
   color: inherit;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Remove controls from Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: None;
+  margin: 0; /* Removes leftover margin */
+}
+
+/* Remove controls from Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Re-applies the controls on :hover and :focus */
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
 .step {
+  width: 38px;
+  height: 38px;
+
   font: inherit;
+  font-size: 20px;
   font-weight: 700;
+  color: #a9a9a9;
 
   border: none;
   background-color: #f2f2f2;
+}
+
+.step:hover,
+.step:focus {
+  color: #000000;
+  outline: none;
+}
+
+.step:active {
+  color: #81b3d2;
+  outline: none;
+}
+
+.step-up {
+  margin-left: auto;
 }
 
 .calendar {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 40px;
+  height: 38px;
+
   border: none;
   background-color: #f2f2f2;
-}
-
-/*.calendar {
-  width: 21px;
-  height: 22px;
-
   background-image: url(../img/calendar.svg);
-  background-position: 50% 50%;
+  background-position: center;
   background-repeat: no-repeat;
-
-}*/
-
-.apartments .btn {
-  font-size: 21px;
-  line-height: 26px;
 }
 
+
+.calendar:hover,
+.calendar:focus {
+  outline: none;
+  background-image: url(../img/calendar-hover.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.calendar:active {
+  background-image: url(../img/calendar-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.search-form .btn {
+  display: block;
+  width: 100%;
+}
+
+.map img {
+  width: 1200px;
+  height: 596px;
+}
 /* footer */
 .main-footer {
   display: flex;
+  min-height: 120px;
   padding-top: 36px;
   padding-right: 72px;
   padding-bottom: 36px;
   padding-left: 72px;
+
+  background-color: rgba(255, 255, 255, .9);
+
+  align-items: center;
 }
+
+.main-page .main-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 
 .hashtag {
   width: 136px;
@@ -754,3 +923,4 @@ a {
 .btn-reserve:active {
   background-color: #503e33;
 }
+

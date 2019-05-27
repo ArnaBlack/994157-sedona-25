@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
- <!-- <div class="wrapper"> -->
+<body class="main-page">
 	<!-- header -->
   	<header class="main-header">
   		<!-- nav -->
@@ -104,49 +103,50 @@
   			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
   			<a class="btn btn-search" href="#">поиск гостиницы в седоне</a>
   			<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-  				<div class="form-group">
+  				<p class="residence-item">
   					<label for="check-in">дата заезда:</label>
   					<input class="date-input" id="check-in"  type="text" name="check-in" aria-label="выбрать дату заезда" placeholder="24 апреля 2017">
   					<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
-  				</div>
-  				<div class="form-group">
+  				</p>
+  				<p class="residence-item">
   					<label for="check-out">дата выезда:</label>
   					<input class="date-input"  id="check-out" type="text"  name="check-out" aria-label="выбрать дату выезда" placeholder="4 июля 2017">
   						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
-  				</div>
-          <div class="form-group">
-    				<p>
-    					<label for="grownups">взрослые</label>
-    					<input class="count-input" id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
-               <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
-    					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
-    				</p>
-    				<p>
-    					<label for="children">дети</label>
-    					<input class="count-input" id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
+  				</p>
+          <div class="count-wrap">
+      			<p class="count-grownups">
+      				<label for="grownups">взрослые:</label>
               <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
-    					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
-    				</p>
+      				<input class="count-input" id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
+      				<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
+      			</p>
+      			<p class="count-children">
+      				<label for="children">дети:</label>
+              <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+      				<input class="count-input" id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
+      				<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
+      			</p>
           </div>
   				<button class="btn" type="submit" aria-label="найти гостиницы">найти</button>
   			</form>
-  			<img src="img/map.png"  width="1200" height="593" alt="США, штат Аризона, город Седона">
+        <div class="map">
+          <img src="img/map.png"  width="1200" height="596" alt="США, штат Аризона, город Седона">
+        </div>
   		</section>
   	</main>
   	<!-- footer -->
   	<footer class="main-footer">
   		<!-- hashtag -->
-    		<p class="hashtag">#visitSEDONA</p>
+    	<p class="hashtag">#visitSEDONA</p>
     		<!-- social -->
-    		<ul class="footer-social">
-    			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Твиттер">Твиттер</a></li>
-    			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Фейсбук">Фейсбук</a></li>
-    			<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Ютюб">Ютюб</a></li>
-    		</ul>
+    	<ul class="footer-social">
+    		<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Твиттер" target="_blank"><span class="visually-hidden">Твиттер</span></a></li>
+    		<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Фейсбук" target="_blank"><span class="visually-hidden">Фейсбук</span></a></li>
+    		<li><a class="social-btn" href="#" aria-label="о Седоне в социальной сети Ютюб" target="_blank"><span class="visually-hidden">Ютюб</span></a></li>
+    	</ul>
     		<!-- copyright -->
-    		<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="перейти на сайт разработчиков">HTML Academy</a></p>
+    	<p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="перейти на сайт разработчиков"><span class="visually-hidden">HTML Academy</span></a></p>
   	</footer>
- <!-- </div> -->
 </body>
 
 </html>
