@@ -139,14 +139,15 @@ a {
 }
 /* intro */
 .intro {
-  margin-bottom: 60px;
+  position: relative;
+
   padding-top: 75px;
   padding-bottom: 80px;
 
   background-color: #659bc2;
   background-image: url(../img/background-intro.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center top;
   background-size: cover;
 }
 
@@ -156,13 +157,31 @@ a {
   height: 353px;
   margin: 0 auto;
 }
+
+.intro::after {
+  position: absolute;
+  bottom: -1px;
+
+  width: 1200px;
+  height: 59px;
+
+  background-image: url(../img/polygon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  content: '';
+}
 /* features */
-/* features title of features-item  */
 .features {
+  padding-top: 60px;
+
   text-align: center;
 }
 
 .lead-text {
+  margin: 0;
+  margin-bottom: 35px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -172,30 +191,86 @@ a {
 
 
 .features h3 {
+  margin: 0;
+  margin-bottom: 30px;
+
   font-size: 21px;
   color: #000000;
 }
 
+.features > p:nth-child(3) {
+  margin-bottom: 50px;
+}
+
 .features-item {
-  /* padding-top: 50px;
-  padding-bottom: 60px;*/
   width: 400px;
+  padding-top: 50px;
+  padding-right: 48px;
+  padding-bottom: 65px;
+  padding-left: 48px;
+}
+
+.features-item p {
+  margin: 0;
+}
+
+.features-item span {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.recommendations-item p {
+  margin: 0;
 }
 
 .recommendations {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 85px;
   padding: 0;
-  padding-top: 60px;
 
   list-style: none;
 }
 
 .recommendations-item {
-  /*пока для сетки*/
-  width: 285px;
+  position: relative;
+
+  width: 400px;
+  padding-top: 160px;
+  padding-right: 55px;
+  padding-bottom: 85px;
+  padding-left: 55px;
+}
+
+.recommendations-item::before {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+
+  width: 75px;
+  height: 76px;
+  margin: auto;
+
+  content: '';
+}
+
+.recommendations-house::before {
+  background-image: url(../img/house-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.recommendations-food::before {
+  background-image: url(../img/food-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.recommendations-gift::before {
+  background-image: url(../img/gift-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .features-promo {
@@ -222,29 +297,39 @@ a {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-top: 45px;
-  padding-bottom: 60px;
 
   background-color: #eeeeee;
 
   list-style: none;
 }
+
+.features-row .features-item {
+  padding-right: 70px;
+  padding-left: 71px;
+}
 /* apartments */
 .apartments {
+  position: relative;
+
   padding-top: 55px;
 
   text-align: center;
 }
 .apartments b {
+  display: block;
+  margin-bottom: 30px;
+
   font-size: 30px;
   line-height: 36px;
   color: #000000;
 }
 
 .apartments > p:first-of-type {
-  line-height: 24px;
   width: 435px;
   margin: 0 auto;
+  margin-bottom: 50px;
+
+  line-height: 24px;
 }
 .btn-search {
   background-color: #766357;
@@ -260,9 +345,24 @@ a {
 }
 
 .search-form {
+  position: absolute;
+  top: 290px;
+  right: 0;
+  left: 0;
+
+  width: 568px;
+  margin: auto;
+  padding: 55px;
+
   font-weight: 700;
   line-height: 26px;
   color: #000000;
+
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 30px;
 }
 
 .search-form input[type='text'],
@@ -275,6 +375,10 @@ a {
 
   border: none;
   background-color: #f2f2f2;
+}
+
+.date-input {
+  width: 346px;
 }
 
 .search-form input[type='text']:hover,
@@ -330,9 +434,9 @@ a {
 }
 
 .hashtag {
+  width: 136px;
   margin: 0;
   margin-right: 255px;
-  width: 136px;
 
   font-size: 21px;
   font-weight: 700;

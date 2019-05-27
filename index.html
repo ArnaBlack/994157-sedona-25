@@ -48,22 +48,22 @@
   			<div class="features-promo">
   				<div class="features-item">
   					<h3 class="promo-title">Настоящий городок</h3>
-  					<span>№ 1</span>
+  					<span>— № 1 —</span>
   					<p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
   				</div>
   				<img src="img/bg-city.jpg" width="800" height="256" alt="домик в городе Седона">
   			</div>
   			<!-- recommendations -->
   			<ul class="recommendations">
-  				<li class="recommendations-item">
+  				<li class="recommendations-item recommendations-house">
   					<h3>Жильё</h3>
   					<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
   				</li>
-  				<li class="recommendations-item">
+  				<li class="recommendations-item recommendations-food">
   					<h3>Еда</h3>
   					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
   				</li>
-  				<li class="recommendations-item">
+  				<li class="recommendations-item recommendations-gift">
   					<h3>Сувениры</h3>
   					<p>Не только китайского, но и местного производства!</p>
   				</li>
@@ -74,7 +74,7 @@
   				<img src="img/bg-canyon.jpg" width="800" height="256" alt="мост дьявола">
   				<div class="features-item">
   					<h3 class="promo-title">Там есть мост дьявола</h3>
-  					<span>№ 2</span>
+  					<span>— № 2 —</span>
   					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
   				</div>
   			</div>
@@ -82,17 +82,17 @@
   			<ul class="features-row">
   				<li class="features-item">
   					<h3>Небольшая площадь</h3>
-  					<span>№ 3</span>
+  					<span>— № 3 —</span>
   					<p>Все достопримечательности находятся очень близко</p>
   				</li>
   				<li class="features-item">
   					<h3>Красивая дорога</h3>
-  					<span>№ 4</span>
+  					<span>— № 4 —</span>
   					<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
   				</li>
   				<li class="features-item">
   					<h3>Мало туристов</h3>
-  					<span>№ 5</span>
+  					<span>— № 5 —</span>
   					<p>Большинство едет в гранд каньон и толпится там</p>
   				</li>
   			</ul>
@@ -104,28 +104,30 @@
   			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
   			<a class="btn btn-search" href="#">поиск гостиницы в седоне</a>
   			<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-  				<p>
+  				<div class="form-group">
   					<label for="check-in">дата заезда:</label>
-  					<input id="check-in"  type="text" name="check-in" aria-label="выбрать дату заезда" placeholder="24 апреля 2017">
+  					<input class="date-input" id="check-in"  type="text" name="check-in" aria-label="выбрать дату заезда" placeholder="24 апреля 2017">
   					<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
-  				</p>
-  				<p>
+  				</div>
+  				<div class="form-group">
   					<label for="check-out">дата выезда:</label>
-  					<input  id="check-out" type="text"  name="check-out" aria-label="выбрать дату выезда" placeholder="4 июля 2017">
+  					<input class="date-input"  id="check-out" type="text"  name="check-out" aria-label="выбрать дату выезда" placeholder="4 июля 2017">
   						<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
-  				</p>
-  				<p>
-  					<label for="grownups">взрослые</label>
-  					<input id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
-             <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
-  					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
-  				</p>
-  				<p>
-  					<label for="children">дети</label>
-  					<input id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
-            <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
-  					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
-  				</p>
+  				</div>
+          <div class="form-group">
+    				<p>
+    					<label for="grownups">взрослые</label>
+    					<input class="count-input" id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
+               <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+    					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
+    				</p>
+    				<p>
+    					<label for="children">дети</label>
+    					<input class="count-input" id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
+              <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+    					<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
+    				</p>
+          </div>
   				<button class="btn" type="submit" aria-label="найти гостиницы">найти</button>
   			</form>
   			<img src="img/map.png"  width="1200" height="593" alt="США, штат Аризона, город Седона">
