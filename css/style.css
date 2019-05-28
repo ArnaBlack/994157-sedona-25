@@ -760,22 +760,33 @@ input[type='number']:focus {
   top: -3px;
   left: -40px;
 
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
 
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left center;
 
   content: '';
 }
 
+.filter-input-checkbox:checked + label::before {
+  background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+  background-position: left center;
+
+}
+
 .filter-input-checkbox:disabled + label::before {
   background-image: url(../img/checkbox-off-disabled.svg);
+    background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .filter-input-checkbox:checked:disabled + label::before {
   background-image: url(../img/checkbox-on-disabled.svg);
+    background-repeat: no-repeat;
+  background-position:left  center;
 }
 
 .filter-input-checkbox:focus + label::before {
@@ -912,6 +923,7 @@ input[type='number']:focus {
 }
 
 .btn-up {
+  top: -2px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -951,15 +963,15 @@ input[type='number']:focus {
 .apartment-wrap {
   display: flex;
   width: 100%;
-  max-width: 420px;
+  max-width: 423px;
 }
 
 .apartment-item-wrap {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  height: 90px;
+  justify-content: space-between;
   margin-left: 30px;
+  width: 258px;
 }
 
 
@@ -999,11 +1011,13 @@ input[type='number']:focus {
 }
 
 .apartament-action {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
 }
 
 .apartament-action .btn {
-  padding: 5px 15px;
+  padding: 4px 15px;
 
   color: #ffffff;
 }
@@ -1036,7 +1050,7 @@ input[type='number']:focus {
   margin: 0;
   padding-top: 4px;
   padding-right: 11px;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
   padding-left: 16px;
 
   color: #666666;
