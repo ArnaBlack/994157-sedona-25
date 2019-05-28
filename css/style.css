@@ -39,7 +39,6 @@ body {
 
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
-
 }
 
 *,
@@ -55,7 +54,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -74,7 +72,6 @@ input[type='checkbox'].visually-hidden {
   border: 0;
 
   -webkit-clip-path: inset(100%);
-
           clip-path: inset(100%);
 }
 
@@ -115,12 +112,14 @@ input[type='checkbox'].visually-hidden {
 
   display: flex;
   justify-content: space-between;
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 478px;
+  width: 340px;
   margin: 0;
   padding: 0;
 
@@ -131,10 +130,14 @@ input[type='checkbox'].visually-hidden {
   flex-wrap: wrap;
 }
 
+.menu:last-of-type {
+  width: 330px;
+}
+
 
 .menu a {
   display: inline-block;
-  padding: 15px 70px;
+  padding: 15px 0;
 
   font-size: 14px;
   font-weight: 700;
@@ -158,12 +161,14 @@ input[type='checkbox'].visually-hidden {
   position: absolute;
   z-index: 1;
   top: 0;
-  right: 0;
-  left: 0;
+  left: 50%;
 
   width: 140px;
   height: 72px;
   margin: auto;
+
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /* intro */
 .intro {
@@ -188,7 +193,7 @@ input[type='checkbox'].visually-hidden {
 
 .intro::after {
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
 
   width: 1200px;
   height: 59px;
@@ -207,7 +212,7 @@ input[type='checkbox'].visually-hidden {
 .lead-text {
   width: 445px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   font-size: 21px;
   font-weight: 700;
@@ -219,14 +224,14 @@ input[type='checkbox'].visually-hidden {
 
 .features h3 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   font-size: 21px;
   color: #000000;
 }
 
 .features > p:nth-child(3) {
-  margin-bottom: 50px;
+  margin-bottom: 53px;
 
   text-align: center;
 }
@@ -235,7 +240,7 @@ input[type='checkbox'].visually-hidden {
   width: 400px;
   padding-top: 50px;
   padding-right: 48px;
-  padding-bottom: 65px;
+  padding-bottom: 61px;
   padding-left: 48px;
 
   text-align: center;
@@ -249,7 +254,7 @@ input[type='checkbox'].visually-hidden {
 
 .features-item span {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .recommendations {
@@ -267,7 +272,7 @@ input[type='checkbox'].visually-hidden {
   position: relative;
 
   width: 400px;
-  padding-top: 160px;
+  padding-top: 164px;
   padding-right: 55px;
   padding-bottom: 85px;
   padding-left: 55px;
@@ -275,12 +280,11 @@ input[type='checkbox'].visually-hidden {
 
 .recommendations-item::before {
   position: absolute;
-  top: 60px;
+  top: 56px;
   left: 50%;
 
   width: 75px;
   height: 76px;
-  margin: auto;
 
   content: '';
   -webkit-transform: translateX(-50%);
@@ -349,13 +353,13 @@ input[type='checkbox'].visually-hidden {
 .apartments {
   position: relative;
 
-  padding-top: 55px;
+  padding-top: 50px;
 
   text-align: center;
 }
 .apartments b {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   font-size: 30px;
   line-height: 36px;
@@ -365,7 +369,7 @@ input[type='checkbox'].visually-hidden {
 .apartments > p:first-of-type {
   width: 435px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 47px;
 
   line-height: 24px;
 }
@@ -376,7 +380,7 @@ input[type='checkbox'].visually-hidden {
 }
 
 .btn-search {
-  padding: 20px 140px;
+  padding: 30px 140px;
 
   background-color: #766357;
 }
@@ -419,16 +423,18 @@ input[type='checkbox'].visually-hidden {
   align-items: center;
 }
 .count-grownups {
+  display: flex;
   width: 226px;
   margin: 0;
-  display: flex;
+
   align-items: center;
 }
 
 .count-children {
+  display: flex;
   width: 179px;
   margin: 0;
-  display: flex;
+
   align-items: center;
 }
 
@@ -486,6 +492,10 @@ input[type='checkbox'].visually-hidden {
   color: inherit;
 }
 
+.search-form input[type='text']::-moz-placeholder {
+  color: inherit;
+}
+
 .search-form input[type='text']::placeholder {
   color: inherit;
 }
@@ -497,8 +507,9 @@ input[type=number] {
 /* Remove controls from Safari and Chrome */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: None;
   margin: 0; /* Removes leftover margin */
+
+  -webkit-appearance: None;
 }
 
 /* Remove controls from Firefox */
@@ -507,8 +518,8 @@ input[type=number] {
 }
 
 /* Re-applies the controls on :hover and :focus */
-input[type="number"]:hover,
-input[type="number"]:focus {
+input[type='number']:hover,
+input[type='number']:focus {
   -moz-appearance: number-input;
 }
 
@@ -528,11 +539,13 @@ input[type="number"]:focus {
 .step:hover,
 .step:focus {
   color: #000000;
+
   outline: none;
 }
 
 .step:active {
   color: #81b3d2;
+
   outline: none;
 }
 
@@ -551,8 +564,8 @@ input[type="number"]:focus {
   border: none;
   background-color: #f2f2f2;
   background-image: url(../img/calendar.svg);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -560,14 +573,14 @@ input[type="number"]:focus {
 .calendar:focus {
   outline: none;
   background-image: url(../img/calendar-hover.svg);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .calendar:active {
   background-image: url(../img/calendar-active.svg);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -585,9 +598,9 @@ input[type="number"]:focus {
   display: flex;
   min-height: 120px;
   padding-top: 36px;
-  padding-right: 72px;
+  padding-right: 101px;
   padding-bottom: 36px;
-  padding-left: 72px;
+  padding-left: 132px;
 
   background-color: rgba(255, 255, 255, .9);
 
@@ -597,7 +610,7 @@ input[type="number"]:focus {
 .main-page .main-footer {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
 }
 
@@ -615,6 +628,8 @@ input[type="number"]:focus {
 }
 
 .footer-social {
+  display: flex;
+  justify-content: space-between;
   width: 150px;
   margin: 0;
   padding: 0;
@@ -622,17 +637,52 @@ input[type="number"]:focus {
   text-align: center;
 
   list-style: none;
+
+  flex-wrap: wrap;
 }
 
-.footer-social a,
-.footer-copyright a {
-  color: #000000;
+.social-btn {
+  display: flex;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+
+  background-color: #81b3d2;
+
+  align-items: center;
+}
+
+.social-btn:hover,
+.social-btn:focus {
+  background-color: #669ec0;
+}
+
+.social-btn:active path {
+  fill: rgba(255, 255, 255, .3);
 }
 
 .footer-copyright {
-  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  width: 197px;
   margin: 0;
   margin-left: auto;
+
+  align-items: center;
+}
+
+.footer-copyright a {
+  width: 113px;
+  height: 39px;
+}
+
+.footer-copyright a:hover path,
+.footer-copyright a:focus path {
+  fill: #81b3d2;
+}
+
+.footer-copyright a:active path {
+  fill: #bdbbbc;
 }
 
 .menu-active a {
@@ -640,7 +690,7 @@ input[type="number"]:focus {
 }
 
 .filters {
-  padding: 30px 72px;
+  padding: 30px 72px 10px;
 
   color: #ffffff;
 
@@ -659,27 +709,45 @@ input[type="number"]:focus {
 .filters ul {
   margin: 0;
   padding: 0;
-  padding-left: 35px;
 
   list-style: none;
 }
 
 .filters fieldset {
-  width: 150px;
+  width: 140px;
   margin: 0;
   padding: 0;
 
   border: none;
 }
 
-.filter-form :first-child {
-  margin-right: 105px;
+.filter-form fieldset:first-child {
+  margin-right: 115px;
 }
 
 .filters legend {
+  margin: 0;
   margin-bottom: 25px;
 
+  font-size: 16px;
   font-weight: 700;
+}
+
+.filter-option {
+  margin-bottom: 24px;
+  padding-left: 40px;
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .filters .apartment-cost {
@@ -687,7 +755,34 @@ input[type="number"]:focus {
   margin-left: auto;
 }
 
-.filter-input:disabled + label {
+.filter-input-checkbox + label::before {
+  position: absolute;
+  top: -3px;
+  left: -40px;
+
+  width: 27px;
+  height: 27px;
+
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  content: '';
+}
+
+.filter-input-checkbox:disabled + label::before {
+  background-image: url(../img/checkbox-off-disabled.svg);
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+  background-image: url(../img/checkbox-on-disabled.svg);
+}
+
+.filter-input-checkbox:focus + label::before {
+  outline: 2px solid #81b3d2;
+}
+
+.filter-input-checkbox:disabled + label {
   color: #6a6a6a;
 }
 
@@ -751,7 +846,7 @@ input[type="number"]:focus {
 
 .result-title {
   margin: 0;
-  margin-right: 30px;
+  margin-right: 47px;
 
   font-size: 21px;
   font-weight: 700;
@@ -796,6 +891,8 @@ input[type="number"]:focus {
 }
 
 .sort-controls {
+  position: relative;
+
   width: 35px;
   margin: 0;
   padding: 0;
@@ -803,8 +900,38 @@ input[type="number"]:focus {
   list-style: none;
 }
 
+
 .btn-sort {
-  color: #000000;
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  border-right: solid 6px transparent;
+  border-left: solid 6px transparent;
+  border-top: solid 10px #cccccc;
+}
+
+.btn-up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.btn-down {
+  right: -1px;
+  top: -2px;
+}
+
+.btn-sort:hover,
+.btn-sort:focus {
+  border-top: solid 10px #000000;
+}
+
+.btn-sort:active {
+  border-top: solid 10px #81b3d2;
+}
+
+.btn-sort-active {
+  border-top: solid 10px #81b3d2;
 }
 
 .apartment-list {
@@ -882,7 +1009,6 @@ input[type="number"]:focus {
 }
 
 .apartament-rating {
-  width: 100%;
   max-width: 112px;
   margin-left: auto;
 }
@@ -896,12 +1022,22 @@ input[type="number"]:focus {
   list-style: none;
 }
 
+.raiting-item {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+.raiting-item img {
+  max-width: none;
+}
+
 .apartament-rating p {
   margin: 0;
-  padding-top: 3px;
+  padding-top: 4px;
   padding-right: 11px;
   padding-bottom: 3px;
-  padding-left: 13px;
+  padding-left: 16px;
 
   color: #666666;
 
@@ -923,4 +1059,3 @@ input[type="number"]:focus {
 .btn-reserve:active {
   background-color: #503e33;
 }
-
