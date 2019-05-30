@@ -100,33 +100,35 @@
   		<b>Заинтересовались?</b>
   		<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
   		<a class="btn btn-search" href="#">поиск гостиницы в седоне</a>
-  		<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-  			<p class="residence-item">
-  				<label for="check-in">дата заезда:</label>
-  				<input class="date-input" id="check-in"  type="text" name="check-in" aria-label="выбрать дату заезда" placeholder="24 апреля 2017">
-  				<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
-  			</p>
-  			<p class="residence-item">
-  				<label for="check-out">дата выезда:</label>
-  				<input class="date-input"  id="check-out" type="text"  name="check-out" aria-label="выбрать дату выезда" placeholder="4 июля 2017">
-  				<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
-  			</p>
-        <div class="count-wrap">
-      		<p class="count-grownups">
-      			<label for="grownups">взрослые:</label>
-            <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
-      			<input class="count-input" id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
-      			<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
-      		</p>
-      		<p class="count-children">
-      			<label for="children">дети:</label>
-            <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
-      			<input class="count-input" id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
-      			<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
-      		</p>
-        </div>
-  			<button class="btn" type="submit" aria-label="найти гостиницы">найти</button>
-  		</form>
+      <div class="form-wrap">
+    		<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+    			<p class="residence-item">
+    				<label for="check-in">дата заезда:</label>
+    				<input class="date-input" id="check-in"  type="text" name="check-in" aria-label="выбрать дату заезда" placeholder="24 апреля 2017">
+    				<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
+    			</p>
+    			<p class="residence-item">
+    				<label for="check-out">дата выезда:</label>
+    				<input class="date-input"  id="check-out" type="text"  name="check-out" aria-label="выбрать дату выезда" placeholder="4 июля 2017">
+    				<button class="calendar" type="button" aria-label="календарь для выбора даты"></button>
+    			</p>
+          <div class="count-wrap">
+        		<p class="count-grownups">
+        			<label for="grownups">взрослые:</label>
+              <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+        			<input class="count-input" id="grownups" type="number" name="grownups" min="1" max="5" step="1" value="2" aria-label="количество взрослых">
+        			<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
+        		</p>
+        		<p class="count-children">
+        			<label for="children">дети:</label>
+              <button class="step step-up" type="button" aria-label="увеличить количество">+</button>
+        			<input class="count-input" id="children" type="number" name="children" min="0" max="5" step="1" value="0" aria-label="количество детей">
+        			<button class="step step-down" type="button" aria-label="уменьшить количество">-</button>
+        		</p>
+          </div>
+    			<button class="btn" type="submit" aria-label="найти гостиницы">найти</button>
+    		</form>
+       </div>
       <div class="map">
         <img src="img/map.png"  width="1200" height="596" alt="США, штат Аризона, город Седона">
       </div>
@@ -173,6 +175,7 @@
       </a>
     </p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

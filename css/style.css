@@ -84,7 +84,6 @@ input[type='checkbox'].visually-hidden {
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
-  vertical-align: middle;
   text-decoration: none;
 
   border: none;
@@ -381,7 +380,7 @@ input[type='checkbox'].visually-hidden {
 
 .btn-search {
   display: inline-block;
-  padding: 30px 140px;
+  padding: 30px 138px;
 
   background-color: #766357;
 }
@@ -395,12 +394,16 @@ input[type='checkbox'].visually-hidden {
   background-color: #503e33;
 }
 
-.search-form {
+.form-wrap {
   position: absolute;
   top: 290px;
   right: 0;
   left: 0;
 
+  overflow: hidden;
+}
+
+.search-form {
   width: 568px;
   margin: auto;
   padding: 55px;
@@ -410,6 +413,15 @@ input[type='checkbox'].visually-hidden {
   color: #000000;
 
   background-color: #ffffff;
+
+  transition:all 0.6s cubic-bezier(.6, .01, 0, 1);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.search-form-show {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .residence-item {
@@ -493,10 +505,6 @@ input[type='checkbox'].visually-hidden {
   color: inherit;
 }
 
-.search-form input[type='text']::-moz-placeholder {
-  color: inherit;
-}
-
 .search-form input[type='text']::placeholder {
   color: inherit;
 }
@@ -525,7 +533,6 @@ input[type='number']:focus {
 }
 
 .step {
-  cursor: pointer;
   width: 38px;
   height: 38px;
 
@@ -536,6 +543,8 @@ input[type='number']:focus {
 
   border: none;
   background-color: #f2f2f2;
+
+  cursor: pointer;
 }
 
 .step:hover,
@@ -559,7 +568,6 @@ input[type='number']:focus {
   position: absolute;
   top: 0;
   right: 0;
-  cursor: pointer;
 
   width: 40px;
   height: 38px;
@@ -569,6 +577,8 @@ input[type='number']:focus {
   background-image: url(../img/calendar.svg);
   background-repeat: no-repeat;
   background-position: center;
+
+  cursor: pointer;
 }
 
 
@@ -793,13 +803,15 @@ input[type='number']:focus {
 }
 
 .filter-btn {
-  font-weight: 400;
   margin: 0 auto;
   padding: 6px 35px;
+
+  font-weight: 400;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
   background-color: transparent;
+
   cursor: pointer;
 }
 
@@ -812,14 +824,15 @@ input[type='number']:focus {
 }
 
 .filter-range {
+  box-sizing: content-box;
   width: 312px;
   margin-left: auto;
   padding: 0;
-  box-sizing: content-box;
 }
 
 .price-controls {
-    position: relative;
+  position: relative;
+
   height: 36px;
   margin-bottom: 20px;
 
@@ -830,7 +843,6 @@ input[type='number']:focus {
 }
 
 .price-controls::after {
-  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -839,6 +851,8 @@ input[type='number']:focus {
   height: 22px;
 
   background: #ffffff;
+
+  content: '';
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -863,11 +877,11 @@ input[type='number']:focus {
   width: 50px;
   margin: 0;
 
-  color: inherit;
   font: inherit;
+  color: inherit;
 
-  background: none;
   border: none;
+  background: none;
 }
 
 .range-controls {
@@ -879,7 +893,7 @@ input[type='number']:focus {
 .range-controls .scale {
   height: 2px;
 
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, .3);
 }
 
 .range-controls .bar {
@@ -896,10 +910,11 @@ input[type='number']:focus {
   width: 4px;
   height: 4px;
 
-  background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, .2);
+
   cursor: pointer;
 }
 
