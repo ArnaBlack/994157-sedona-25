@@ -35,7 +35,7 @@
     		<h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
     		<form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
     			<!-- apartment-content -->
-      		<fieldset>
+      		<fieldset class="filter-group">
       				<legend>Инфраструктура:</legend>
       				<ul>
       					<li class="filter-option">
@@ -53,7 +53,7 @@
       				</ul>
       		</fieldset>
     		  <!-- apartment-type -->
-      		<fieldset>
+      		<fieldset class="filter-group">
       			<legend>Тип жилья:</legend>
       			<ul>
       				<li class="filter-option">
@@ -71,16 +71,19 @@
       			</ul>
       		</fieldset>
     			<!-- apartment-cost -->
-    			<fieldset class="apartment-cost">
+    			<fieldset class="filter-range">
             <legend>Стоимость в сутки (Р):</legend>
-    				<p class="range-daycost">
-              <label for="range-start">от</label>
-              <input class="range-input" type="number" name="range-start" id="range-start" value="0" min="0" max="3000" aria-label="минимальная стоимость">
-              <label for="range-end">до</label>
-              <input class="range-input" type="number" name="range-end" id="range-end" value="3000" min="1" max="3000" aria-label="максимальная стоимость">
-    				</p>
-            <label class="visually-hidden" for="daycost">диапазон стоимости</label>
-    				<input  id="daycost" type="range" name="daycost" min="0" max="3000" step="100" aria-label="выбрать диапазон стоимости">
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
     				<button class="btn filter-btn" type="submit">показать</button>
     			</fieldset>
     		</form>

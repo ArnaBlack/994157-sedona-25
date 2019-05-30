@@ -76,7 +76,7 @@ input[type='checkbox'].visually-hidden {
 }
 
 .btn {
-  display: inline-block;
+  display: block;
   padding: 16px;
 
   font: inherit;
@@ -380,6 +380,7 @@ input[type='checkbox'].visually-hidden {
 }
 
 .btn-search {
+  display: inline-block;
   padding: 30px 140px;
 
   background-color: #766357;
@@ -524,6 +525,7 @@ input[type='number']:focus {
 }
 
 .step {
+  cursor: pointer;
   width: 38px;
   height: 38px;
 
@@ -557,6 +559,7 @@ input[type='number']:focus {
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 
   width: 40px;
   height: 38px;
@@ -713,12 +716,10 @@ input[type='number']:focus {
   list-style: none;
 }
 
-.filters fieldset {
+.filter-group {
   width: 140px;
   margin: 0;
   padding: 0;
-
-  border: none;
 }
 
 .filter-form fieldset:first-child {
@@ -750,11 +751,6 @@ input[type='number']:focus {
           user-select: none;
 }
 
-.filters .apartment-cost {
-  width: 318px;
-  margin-left: auto;
-}
-
 .filter-input-checkbox + label::before {
   position: absolute;
   top: -3px;
@@ -772,21 +768,20 @@ input[type='number']:focus {
 
 .filter-input-checkbox:checked + label::before {
   background-image: url(../img/checkbox-on.svg);
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: left center;
-
 }
 
 .filter-input-checkbox:disabled + label::before {
   background-image: url(../img/checkbox-off-disabled.svg);
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: left center;
 }
 
 .filter-input-checkbox:checked:disabled + label::before {
   background-image: url(../img/checkbox-on-disabled.svg);
-    background-repeat: no-repeat;
-  background-position:left  center;
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .filter-input-checkbox:focus + label::before {
@@ -799,9 +794,13 @@ input[type='number']:focus {
 
 .filter-btn {
   font-weight: 400;
+  margin: 0 auto;
+  padding: 6px 35px;
 
   border: 2px solid #ffffff;
+  border-radius: 2px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .filter-btn:hover,
@@ -812,23 +811,109 @@ input[type='number']:focus {
   background-color: #ffffff;
 }
 
-.range-daycost {
+.filter-range {
+  width: 312px;
+  margin-left: auto;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.price-controls {
+    position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
   border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
-.range-daycost input[type='number'] {
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 60px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
   font: inherit;
-  color: #ffffff;
 
+  background: none;
   border: none;
-  background-color: transparent;
 }
 
-.range-daycost input[type='number']:focus {
-  border: none;
-  background-color: transparent;
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
 }
 
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
 
 .result-wrap-top {
   display: flex;
@@ -914,23 +999,25 @@ input[type='number']:focus {
 
 .btn-sort {
   position: absolute;
+
   width: 0;
   height: 0;
 
+  border-top: solid 10px #cccccc;
   border-right: solid 6px transparent;
   border-left: solid 6px transparent;
-  border-top: solid 10px #cccccc;
 }
 
 .btn-up {
   top: -2px;
+
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
 .btn-down {
-  right: -1px;
   top: -2px;
+  right: -1px;
 }
 
 .btn-sort:hover,
@@ -968,10 +1055,10 @@ input[type='number']:focus {
 
 .apartment-item-wrap {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  margin-left: 30px;
+  flex-direction: column;
   width: 258px;
+  margin-left: 30px;
 }
 
 
