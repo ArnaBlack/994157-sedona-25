@@ -223,7 +223,7 @@ input[type='checkbox'].visually-hidden {
 
 .features h3 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   font-size: 21px;
   color: #000000;
@@ -237,7 +237,7 @@ input[type='checkbox'].visually-hidden {
 
 .features-item {
   width: 400px;
-  padding-top: 50px;
+  padding-top: 48px;
   padding-right: 48px;
   padding-bottom: 61px;
   padding-left: 48px;
@@ -271,7 +271,7 @@ input[type='checkbox'].visually-hidden {
   position: relative;
 
   width: 400px;
-  padding-top: 164px;
+  padding-top: 162px;
   padding-right: 55px;
   padding-bottom: 85px;
   padding-left: 55px;
@@ -346,6 +346,7 @@ input[type='checkbox'].visually-hidden {
 .features-row .features-item {
   padding-right: 70px;
   padding-left: 71px;
+  padding-top: 45px;
 }
 
 /* apartments */
@@ -414,7 +415,7 @@ input[type='checkbox'].visually-hidden {
 
   background-color: #ffffff;
 
-  transition:all 0.6s cubic-bezier(.6, .01, 0, 1);
+  transition: all .6s cubic-bezier(.6, .01, 0, 1);
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
@@ -494,24 +495,45 @@ input[type='checkbox'].visually-hidden {
 }
 
 .search-form input[type='text']::-webkit-input-placeholder {
-  color: inherit;
+  color: #000000;
 }
 
 .search-form input[type='text']:-ms-input-placeholder {
-  color: inherit;
+  color: #000000;
 }
 
 .search-form input[type='text']::-ms-input-placeholder {
-  color: inherit;
+  color: #000000;
+}
+
+.search-form input[type='text']::-moz-placeholder {
+  color: #000000;
 }
 
 .search-form input[type='text']::placeholder {
-  color: inherit;
+  color: #000000;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
+.search-form input[type='text']:focus::-webkit-input-placeholder {
+  color: transparent;
+};
+
+.search-form input[type='text']:focus::-moz-placeholder {
+  color: transparent;
 }
+
+.search-form input[type='text']:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-form input[type='text']:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-form input[type='text']:focus::placeholder {
+  color: transparent;
+}
+
 
 /* Remove controls from Safari and Chrome */
 input[type=number]::-webkit-inner-spin-button,
@@ -524,12 +546,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* Remove controls from Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-/* Re-applies the controls on :hover and :focus */
-input[type='number']:hover,
-input[type='number']:focus {
-  -moz-appearance: number-input;
 }
 
 .step {
@@ -574,7 +590,7 @@ input[type='number']:focus {
 
   border: none;
   background-color: #f2f2f2;
-  background-image: url(../img/calendar.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="21" height="22"%3E%3Cpath d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" fill="rgba(0, 0, 0, 0.3)"/%3E%3Cpath d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z" fill="rgba(0, 0, 0, 0.3)"/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: center;
 
@@ -585,13 +601,13 @@ input[type='number']:focus {
 .calendar:hover,
 .calendar:focus {
   outline: none;
-  background-image: url(../img/calendar-hover.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="21" height="22"%3E%3Cpath d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" fill="rgba(0, 0, 0)"/%3E%3Cpath d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z" fill="rgba(0, 0, 0)"/%3E%3C/svg%3E%0A');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .calendar:active {
-  background-image: url(../img/calendar-active.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="21" height="22"%3E%3Cpath d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" fill="%2381b3d2"/%3E%3Cpath d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z" fill="%2381b3d2"/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -769,7 +785,7 @@ input[type='number']:focus {
   width: 30px;
   height: 30px;
 
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="23" height="23"%3E%3Cpath fill="%23fff" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: left center;
 
@@ -777,19 +793,19 @@ input[type='number']:focus {
 }
 
 .filter-input-checkbox:checked + label::before {
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="27" height="23"%3E%3Cpath fill="%23fff" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/%3E%3Cpath fill="%23fff" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/%3E%3C/svg%3E%0A');
   background-repeat: no-repeat;
   background-position: left center;
 }
 
 .filter-input-checkbox:disabled + label::before {
-  background-image: url(../img/checkbox-off-disabled.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="23" height="23"%3E%3Cpath fill="%236a6a6a" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: left center;
 }
 
 .filter-input-checkbox:checked:disabled + label::before {
-  background-image: url(../img/checkbox-on-disabled.svg);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="27" height="23"%3E%3Cpath fill="%236a6a6a" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/%3E%3Cpath fill="%236a6a6a" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/%3E%3C/svg%3E%0A');
   background-repeat: no-repeat;
   background-position: left center;
 }
@@ -825,15 +841,19 @@ input[type='number']:focus {
 
 .filter-range {
   box-sizing: content-box;
-  width: 312px;
+  width: 314px;
   margin-left: auto;
   padding: 0;
+}
+
+.filter-range legend {
+  margin-bottom: 7px;
 }
 
 .price-controls {
   position: relative;
 
-  height: 36px;
+  height: 34px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -1035,8 +1055,7 @@ input[type='number']:focus {
   right: -1px;
 }
 
-.btn-sort:hover,
-.btn-sort:focus {
+.btn-sort:hover {
   border-top: solid 10px #000000;
 }
 
