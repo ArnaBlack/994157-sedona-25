@@ -38,7 +38,7 @@ body {
   color: #333333;
 
   background-color: #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 1, 1, .2);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 *,
@@ -95,7 +95,7 @@ input[type='checkbox'].visually-hidden {
   background-color: #669ec0;
 }
 .btn:active {
-  color: rgba(255, 255, 255, .3);
+  color: rgba(255, 255, 255, 0.3);
 
   background-color: #5496bd;
 }
@@ -153,7 +153,7 @@ input[type='checkbox'].visually-hidden {
 }
 
 .menu a:active {
-  color: rgba(0, 0, 0, .3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-header-logo {
@@ -632,7 +632,7 @@ input[type=number] {
   padding-bottom: 36px;
   padding-left: 132px;
 
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
 
   align-items: center;
 }
