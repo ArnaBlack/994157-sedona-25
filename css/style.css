@@ -118,6 +118,7 @@ input[type='checkbox'].visually-hidden {
 .menu {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 340px;
   margin: 0;
   padding: 0;
