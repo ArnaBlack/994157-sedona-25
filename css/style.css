@@ -400,8 +400,13 @@ input[type='checkbox'].visually-hidden {
   top: 292px;
   right: 0;
   left: 0;
+  z-index: -1;
 
-  overflow: hidden;
+  overflow: hidden
+}
+
+.form-wrap-show {
+  z-index: 1;
 }
 
 .search-form {
@@ -617,6 +622,7 @@ input[type=number] {
   display: block;
   width: 100%;
 }
+
 
 .map iframe {
   width: 1200px;
