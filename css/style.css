@@ -398,7 +398,7 @@ input[type='checkbox'].visually-hidden {
 
 .form-wrap {
   position: absolute;
-  top: 292px;
+  top: 289px;
   right: 0;
   left: 0;
   z-index: -1;
@@ -624,11 +624,19 @@ input[type=number] {
   width: 100%;
 }
 
+.map {
+  position: relative;
+}
 
 .map iframe {
   width: 1200px;
   height: 596px;
+  position: absolute;
   border: none;
+}
+.map img {
+  width: 1200px;
+  height: 596px;
 }
 /* footer */
 .main-footer {
@@ -947,7 +955,7 @@ input[type=number] {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  border-width: 10px;
 }
 
 .range-toggle-min {
