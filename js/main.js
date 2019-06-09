@@ -7,29 +7,13 @@ var dateOut = form.querySelector('[name=check-out]');
 var grownups = form.querySelector('[name=grownups]');
 var children = form.querySelector('[name=children]');
 
-var isStorageSupport = true;
-var storageChildren = "";
-var storageGrownups  = "";
 
-  try {
-    storageGrownups = localStorage.getItem("grownups");
-    storageChildren = localStorage.getItem("children");
-  } catch (err) {
-    isStorageSupport = false;
-  }
 
 showFormButton.addEventListener('click', function (evt) {
  evt.preventDefault();
  form.classList.toggle('search-form-show');
  form.classList.remove('form-error');
  formWrap.classList.toggle('form-wrap-show');
-
- if (storageGrownups) {
-      grownups.value = storageGrownups;
-    }
- if (storageChildren) {
-       children.value = storageChildren;
- }
 });
 
 form.addEventListener('submit', function (evt) {
@@ -46,12 +30,6 @@ form.addEventListener('submit', function (evt) {
         dateOut.focus();
       }
     }
-  else {
-  if (isStorageSupport) {
-    localStorage.setItem("grownups", grownups.value);
-    localStorage.setItem("children", children.value);
-    }
-  }
 });
 
 window.addEventListener('keydown', function (evt) {
