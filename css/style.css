@@ -1160,6 +1160,10 @@ input[type=number] {
   color: #ffffff;
 }
 
+.apartament-action .btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .apartament-rating {
   max-width: 112px;
   margin-left: auto;
@@ -1197,6 +1201,7 @@ input[type=number] {
 
   background-color: #f2f2f2;
 }
+
 
 .btn-reserve {
   color: #ffffff;
