@@ -111,33 +111,29 @@ input[type='checkbox'].visually-hidden {
 
   display: flex;
   justify-content: space-between;
-  padding-right: 70px;
-  padding-left: 70px;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 340px;
+  width: 480px;
   margin: 0;
   padding: 0;
 
   color: #000000;
 
   list-style: none;
-
-  flex-wrap: wrap;
 }
 
 .menu:last-of-type {
-  width: 330px;
+  width: 470px;
 }
 
 
 .menu a {
   display: inline-block;
-  padding: 15px 0;
+  padding: 15px 70px;
 
   font-size: 14px;
   font-weight: 700;
@@ -212,7 +208,7 @@ input[type='checkbox'].visually-hidden {
 .lead-text {
   width: 445px;
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 
   font-size: 21px;
   font-weight: 700;
@@ -240,7 +236,7 @@ input[type='checkbox'].visually-hidden {
   width: 400px;
   padding-top: 48px;
   padding-right: 48px;
-  padding-bottom: 61px;
+  padding-bottom: 55px;
   padding-left: 48px;
 
   text-align: center;
@@ -254,7 +250,7 @@ input[type='checkbox'].visually-hidden {
 
 .features-item span {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .recommendations {
@@ -274,7 +270,7 @@ input[type='checkbox'].visually-hidden {
   width: 400px;
   padding-top: 162px;
   padding-right: 55px;
-  padding-bottom: 85px;
+  padding-bottom: 82px;
   padding-left: 55px;
 }
 
@@ -348,13 +344,14 @@ input[type='checkbox'].visually-hidden {
   padding-right: 70px;
   padding-left: 71px;
   padding-top: 45px;
+  padding-bottom: 61px;
 }
 
 /* apartments */
 .apartments {
   position: relative;
 
-  padding-top: 50px;
+  padding-top: 52px;
 
   text-align: center;
 }
@@ -370,7 +367,7 @@ input[type='checkbox'].visually-hidden {
 .apartments > p:first-of-type {
   width: 435px;
   margin: 0 auto;
-  margin-bottom: 47px;
+  margin-bottom: 44px;
 
   line-height: 24px;
 }
@@ -415,6 +412,7 @@ input[type='checkbox'].visually-hidden {
   width: 568px;
   margin: auto;
   padding: 55px;
+  padding-top: 60px;
 
   font-weight: 700;
   line-height: 26px;
@@ -513,6 +511,10 @@ input[type='checkbox'].visually-hidden {
   color: #000000;
 }
 
+.search-form input[type='text']::-moz-placeholder {
+  color: #000000;
+}
+
 .search-form input[type='text']::placeholder {
   color: #000000;
 }
@@ -526,6 +528,10 @@ input[type='checkbox'].visually-hidden {
 }
 
 .search-form input[type='text']:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.search-form input[type='text']:focus::-moz-placeholder {
   color: transparent;
 }
 
@@ -635,9 +641,9 @@ input[type=number] {
 .main-footer {
   display: flex;
   min-height: 120px;
-  padding-top: 36px;
+  padding-top: 29px;
   padding-right: 101px;
-  padding-bottom: 36px;
+  padding-bottom: 37px;
   padding-left: 132px;
 
   background-color: rgba(255, 255, 255, 0.9);
@@ -728,7 +734,7 @@ input[type=number] {
 }
 
 .filters {
-  padding: 30px 72px 10px;
+  padding: 27px 72px 10px;
 
   color: #ffffff;
 
@@ -962,7 +968,8 @@ input[type=number] {
 .result-wrap-top {
   display: flex;
   justify-content: space-between;
-  padding: 30px 72px;
+  padding: 26px 72px;
+  padding-bottom: 30px;
 
   font-size: 12px;
   line-height: 18px;
@@ -1085,7 +1092,7 @@ input[type=number] {
 
 .apartment-item {
   display: flex;
-  padding: 30px 72px;
+  padding: 28px 72px;
 
   border-bottom: 1px solid #e5e5e5;
 }
@@ -1098,7 +1105,6 @@ input[type=number] {
 
 .apartment-item-wrap {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   width: 258px;
   margin-left: 30px;
@@ -1107,6 +1113,7 @@ input[type=number] {
 
 .apartment-item-head {
   margin: 0;
+  margin-bottom: 5px;
 
   font-size: 21px;
   font-weight: 700;
@@ -1131,11 +1138,14 @@ input[type=number] {
   justify-content: space-between;
   width: 182px;
   margin: 0;
+  margin-bottom: 13px;
 }
 
 .preview {
   width: 135px;
   height: 90px;
+
+  margin-top: 5px;
 }
 
 .apartament-action {
@@ -1145,7 +1155,7 @@ input[type=number] {
 }
 
 .apartament-action .btn {
-  padding: 4px 15px;
+  padding: 4px 16px;
 
   color: #ffffff;
 }
@@ -1159,7 +1169,7 @@ input[type=number] {
 .raiting-list {
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 
   list-style: none;
 }
@@ -1168,10 +1178,12 @@ input[type=number] {
   width: 18px;
   height: 18px;
   margin-left: 5px;
-}
 
-.raiting-item img {
-  max-width: none;
+  flex-shrink: 0;
+
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .apartament-rating p {
